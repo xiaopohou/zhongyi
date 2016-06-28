@@ -13,6 +13,13 @@
 		1DEE8BAE1D226B9200DB6AA5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DEE8BAC1D226B9200DB6AA5 /* main.m */; };
 		1DEE8BB01D226E0400DB6AA5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1DEE8BAF1D226E0400DB6AA5 /* Info.plist */; };
 		1DEE8BB31D226EE000DB6AA5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DEE8BB21D226EE000DB6AA5 /* AppDelegate.m */; };
+		1DEE8BB61D227C7600DB6AA5 /* LZHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DEE8BB51D227C7600DB6AA5 /* LZHomeViewController.m */; };
+		1DEE8BBD1D227FF600DB6AA5 /* LZMainTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DEE8BBC1D227FF600DB6AA5 /* LZMainTabBarViewController.m */; };
+		1DEE8BC01D2283CF00DB6AA5 /* LZNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DEE8BBF1D2283CF00DB6AA5 /* LZNavigationViewController.m */; };
+		1DEE8BC61D2284FF00DB6AA5 /* LZAboutMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DEE8BC51D2284FF00DB6AA5 /* LZAboutMeViewController.m */; };
+		1DEE8BC91D22850C00DB6AA5 /* LZClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DEE8BC81D22850C00DB6AA5 /* LZClassViewController.m */; };
+		1DEE8BCC1D22851D00DB6AA5 /* LZSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DEE8BCB1D22851D00DB6AA5 /* LZSettingViewController.m */; };
+		1DEE8BD61D22858000DB6AA5 /* LZDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DEE8BD51D22858000DB6AA5 /* LZDetailViewController.m */; };
 		F79AE99E43EA13AA6A04F2D7 /* libPods-zhongyi.sina.com.mobileApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 86BF91E674A42A6F764A49E3 /* libPods-zhongyi.sina.com.mobileApp.a */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +33,20 @@
 		1DEE8BAF1D226E0400DB6AA5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DEE8BB11D226EE000DB6AA5 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1DEE8BB21D226EE000DB6AA5 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1DEE8BB41D227C7600DB6AA5 /* LZHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZHomeViewController.h; sourceTree = "<group>"; };
+		1DEE8BB51D227C7600DB6AA5 /* LZHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZHomeViewController.m; sourceTree = "<group>"; };
+		1DEE8BBB1D227FF600DB6AA5 /* LZMainTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZMainTabBarViewController.h; sourceTree = "<group>"; };
+		1DEE8BBC1D227FF600DB6AA5 /* LZMainTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZMainTabBarViewController.m; sourceTree = "<group>"; };
+		1DEE8BBE1D2283CF00DB6AA5 /* LZNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZNavigationViewController.h; sourceTree = "<group>"; };
+		1DEE8BBF1D2283CF00DB6AA5 /* LZNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZNavigationViewController.m; sourceTree = "<group>"; };
+		1DEE8BC41D2284FF00DB6AA5 /* LZAboutMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZAboutMeViewController.h; sourceTree = "<group>"; };
+		1DEE8BC51D2284FF00DB6AA5 /* LZAboutMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZAboutMeViewController.m; sourceTree = "<group>"; };
+		1DEE8BC71D22850C00DB6AA5 /* LZClassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZClassViewController.h; sourceTree = "<group>"; };
+		1DEE8BC81D22850C00DB6AA5 /* LZClassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZClassViewController.m; sourceTree = "<group>"; };
+		1DEE8BCA1D22851D00DB6AA5 /* LZSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZSettingViewController.h; sourceTree = "<group>"; };
+		1DEE8BCB1D22851D00DB6AA5 /* LZSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZSettingViewController.m; sourceTree = "<group>"; };
+		1DEE8BD41D22858000DB6AA5 /* LZDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZDetailViewController.h; sourceTree = "<group>"; };
+		1DEE8BD51D22858000DB6AA5 /* LZDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZDetailViewController.m; sourceTree = "<group>"; };
 		86BF91E674A42A6F764A49E3 /* libPods-zhongyi.sina.com.mobileApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-zhongyi.sina.com.mobileApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4BF94A2A7D81442B984C225 /* Pods-zhongyi.sina.com.mobileApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zhongyi.sina.com.mobileApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-zhongyi.sina.com.mobileApp/Pods-zhongyi.sina.com.mobileApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,6 +84,7 @@
 		1D6527C11D225C4700E89D69 /* zhongyi.sina.com.mobileApp */ = {
 			isa = PBXGroup;
 			children = (
+				1DEE8BB71D227CDF00DB6AA5 /* zhongyi.Extension */,
 				1DEE8BA11D226AD800DB6AA5 /* zhongyi.3thSDK */,
 				1DEE8BA21D226AD800DB6AA5 /* zhongyi.Config */,
 				1DEE8BA31D226AD800DB6AA5 /* zhongyi.Resource */,
@@ -75,6 +97,7 @@
 		1D6527DA1D22645100E89D69 /* zhongyi.Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1DEE8BD01D22856E00DB6AA5 /* Detail */,
 				1DEE8B8C1D226A0E00DB6AA5 /* AboutMe */,
 				1DEE8B901D226A0E00DB6AA5 /* Class */,
 				1DEE8B941D226A0E00DB6AA5 /* Home */,
@@ -98,6 +121,8 @@
 		1DEE8B8D1D226A0E00DB6AA5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1DEE8BC41D2284FF00DB6AA5 /* LZAboutMeViewController.h */,
+				1DEE8BC51D2284FF00DB6AA5 /* LZAboutMeViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -122,6 +147,8 @@
 				1DEE8B911D226A0E00DB6AA5 /* Controller */,
 				1DEE8B921D226A0E00DB6AA5 /* Model */,
 				1DEE8B931D226A0E00DB6AA5 /* View */,
+				1DEE8BC71D22850C00DB6AA5 /* LZClassViewController.h */,
+				1DEE8BC81D22850C00DB6AA5 /* LZClassViewController.m */,
 			);
 			name = Class;
 			path = zhongyi.sina.com.mobileApp/zhongyi.Controller/Class;
@@ -162,6 +189,12 @@
 		1DEE8B951D226A0E00DB6AA5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1DEE8BB41D227C7600DB6AA5 /* LZHomeViewController.h */,
+				1DEE8BB51D227C7600DB6AA5 /* LZHomeViewController.m */,
+				1DEE8BBB1D227FF600DB6AA5 /* LZMainTabBarViewController.h */,
+				1DEE8BBC1D227FF600DB6AA5 /* LZMainTabBarViewController.m */,
+				1DEE8BBE1D2283CF00DB6AA5 /* LZNavigationViewController.h */,
+				1DEE8BBF1D2283CF00DB6AA5 /* LZNavigationViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -204,6 +237,8 @@
 		1DEE8B9C1D226A0E00DB6AA5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1DEE8BCA1D22851D00DB6AA5 /* LZSettingViewController.h */,
+				1DEE8BCB1D22851D00DB6AA5 /* LZSettingViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -255,6 +290,46 @@
 			path = zhongyi.Tool;
 			sourceTree = "<group>";
 		};
+		1DEE8BB71D227CDF00DB6AA5 /* zhongyi.Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = zhongyi.Extension;
+			sourceTree = "<group>";
+		};
+		1DEE8BD01D22856E00DB6AA5 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				1DEE8BD11D22856E00DB6AA5 /* Controller */,
+				1DEE8BD21D22856E00DB6AA5 /* Model */,
+				1DEE8BD31D22856E00DB6AA5 /* View */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		1DEE8BD11D22856E00DB6AA5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1DEE8BD41D22858000DB6AA5 /* LZDetailViewController.h */,
+				1DEE8BD51D22858000DB6AA5 /* LZDetailViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1DEE8BD21D22856E00DB6AA5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1DEE8BD31D22856E00DB6AA5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		3CC6EFCBFF041B519EA6F862 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -301,6 +376,7 @@
 		1D6527B71D225C4700E89D69 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = LZ;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = zhongyi;
 				TargetAttributes = {
@@ -395,7 +471,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DEE8BB31D226EE000DB6AA5 /* AppDelegate.m in Sources */,
+				1DEE8BC01D2283CF00DB6AA5 /* LZNavigationViewController.m in Sources */,
+				1DEE8BC61D2284FF00DB6AA5 /* LZAboutMeViewController.m in Sources */,
+				1DEE8BBD1D227FF600DB6AA5 /* LZMainTabBarViewController.m in Sources */,
+				1DEE8BD61D22858000DB6AA5 /* LZDetailViewController.m in Sources */,
 				1DEE8BAE1D226B9200DB6AA5 /* main.m in Sources */,
+				1DEE8BB61D227C7600DB6AA5 /* LZHomeViewController.m in Sources */,
+				1DEE8BC91D22850C00DB6AA5 /* LZClassViewController.m in Sources */,
+				1DEE8BCC1D22851D00DB6AA5 /* LZSettingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
