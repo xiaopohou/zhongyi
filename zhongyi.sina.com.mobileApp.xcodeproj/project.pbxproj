@@ -1,0 +1,529 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1DEE8BA81D226B5B00DB6AA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DEE8BA51D226B5B00DB6AA5 /* Assets.xcassets */; };
+		1DEE8BA91D226B5B00DB6AA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DEE8BA61D226B5B00DB6AA5 /* LaunchScreen.storyboard */; };
+		1DEE8BAA1D226B5B00DB6AA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DEE8BA71D226B5B00DB6AA5 /* Main.storyboard */; };
+		1DEE8BAE1D226B9200DB6AA5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DEE8BAC1D226B9200DB6AA5 /* main.m */; };
+		1DEE8BB01D226E0400DB6AA5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1DEE8BAF1D226E0400DB6AA5 /* Info.plist */; };
+		1DEE8BB31D226EE000DB6AA5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DEE8BB21D226EE000DB6AA5 /* AppDelegate.m */; };
+		F79AE99E43EA13AA6A04F2D7 /* libPods-zhongyi.sina.com.mobileApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 86BF91E674A42A6F764A49E3 /* libPods-zhongyi.sina.com.mobileApp.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D6527BF1D225C4700E89D69 /* zhongyi.sina.com.mobileApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zhongyi.sina.com.mobileApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DEE8BA51D226B5B00DB6AA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1DEE8BA61D226B5B00DB6AA5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1DEE8BA71D226B5B00DB6AA5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		1DEE8BAC1D226B9200DB6AA5 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1DEE8BAF1D226E0400DB6AA5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DEE8BB11D226EE000DB6AA5 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1DEE8BB21D226EE000DB6AA5 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		60096A26FB662791EC3B38B9 /* Pods-zhongyi.sina.com.mobileApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zhongyi.sina.com.mobileApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-zhongyi.sina.com.mobileApp/Pods-zhongyi.sina.com.mobileApp.release.xcconfig"; sourceTree = "<group>"; };
+		86BF91E674A42A6F764A49E3 /* libPods-zhongyi.sina.com.mobileApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-zhongyi.sina.com.mobileApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D6527BC1D225C4700E89D69 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F79AE99E43EA13AA6A04F2D7 /* libPods-zhongyi.sina.com.mobileApp.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1D6527B61D225C4700E89D69 = {
+			isa = PBXGroup;
+			children = (
+				1D6527C11D225C4700E89D69 /* zhongyi.sina.com.mobileApp */,
+				1D6527C01D225C4700E89D69 /* Products */,
+				B955AFC7897CDF8BD0E8795F /* Pods */,
+				3CC6EFCBFF041B519EA6F862 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1D6527C01D225C4700E89D69 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6527BF1D225C4700E89D69 /* zhongyi.sina.com.mobileApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1D6527C11D225C4700E89D69 /* zhongyi.sina.com.mobileApp */ = {
+			isa = PBXGroup;
+			children = (
+				1DEE8BA11D226AD800DB6AA5 /* zhongyi.3thSDK */,
+				1DEE8BA21D226AD800DB6AA5 /* zhongyi.Config */,
+				1DEE8BA31D226AD800DB6AA5 /* zhongyi.Resource */,
+				1DEE8BA41D226AD800DB6AA5 /* zhongyi.Tool */,
+				1D6527DA1D22645100E89D69 /* zhongyi.Controller */,
+			);
+			path = zhongyi.sina.com.mobileApp;
+			sourceTree = "<group>";
+		};
+		1D6527DA1D22645100E89D69 /* zhongyi.Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1DEE8B8C1D226A0E00DB6AA5 /* AboutMe */,
+				1DEE8B901D226A0E00DB6AA5 /* Class */,
+				1DEE8B941D226A0E00DB6AA5 /* Home */,
+				1DEE8B981D226A0E00DB6AA5 /* Main */,
+				1DEE8B9B1D226A0E00DB6AA5 /* Setting */,
+			);
+			path = zhongyi.Controller;
+			sourceTree = "<group>";
+		};
+		1DEE8B8C1D226A0E00DB6AA5 /* AboutMe */ = {
+			isa = PBXGroup;
+			children = (
+				1DEE8B8D1D226A0E00DB6AA5 /* Controller */,
+				1DEE8B8E1D226A0E00DB6AA5 /* Model */,
+				1DEE8B8F1D226A0E00DB6AA5 /* View */,
+			);
+			name = AboutMe;
+			path = zhongyi.sina.com.mobileApp/zhongyi.Controller/AboutMe;
+			sourceTree = SOURCE_ROOT;
+		};
+		1DEE8B8D1D226A0E00DB6AA5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1DEE8B8E1D226A0E00DB6AA5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1DEE8B8F1D226A0E00DB6AA5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1DEE8B901D226A0E00DB6AA5 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				1DEE8B911D226A0E00DB6AA5 /* Controller */,
+				1DEE8B921D226A0E00DB6AA5 /* Model */,
+				1DEE8B931D226A0E00DB6AA5 /* View */,
+			);
+			name = Class;
+			path = zhongyi.sina.com.mobileApp/zhongyi.Controller/Class;
+			sourceTree = SOURCE_ROOT;
+		};
+		1DEE8B911D226A0E00DB6AA5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1DEE8B921D226A0E00DB6AA5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1DEE8B931D226A0E00DB6AA5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1DEE8B941D226A0E00DB6AA5 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1DEE8B951D226A0E00DB6AA5 /* Controller */,
+				1DEE8B961D226A0E00DB6AA5 /* Model */,
+				1DEE8B971D226A0E00DB6AA5 /* View */,
+			);
+			name = Home;
+			path = zhongyi.sina.com.mobileApp/zhongyi.Controller/Home;
+			sourceTree = SOURCE_ROOT;
+		};
+		1DEE8B951D226A0E00DB6AA5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1DEE8B961D226A0E00DB6AA5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1DEE8B971D226A0E00DB6AA5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1DEE8B981D226A0E00DB6AA5 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				1DEE8BB11D226EE000DB6AA5 /* AppDelegate.h */,
+				1DEE8BB21D226EE000DB6AA5 /* AppDelegate.m */,
+			);
+			name = Main;
+			path = zhongyi.sina.com.mobileApp/zhongyi.Controller/Main;
+			sourceTree = SOURCE_ROOT;
+		};
+		1DEE8B9B1D226A0E00DB6AA5 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				1DEE8B9C1D226A0E00DB6AA5 /* Controller */,
+				1DEE8B9D1D226A0E00DB6AA5 /* Model */,
+				1DEE8B9E1D226A0E00DB6AA5 /* View */,
+			);
+			name = Setting;
+			path = zhongyi.sina.com.mobileApp/zhongyi.Controller/Setting;
+			sourceTree = SOURCE_ROOT;
+		};
+		1DEE8B9C1D226A0E00DB6AA5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1DEE8B9D1D226A0E00DB6AA5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1DEE8B9E1D226A0E00DB6AA5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1DEE8BA11D226AD800DB6AA5 /* zhongyi.3thSDK */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = zhongyi.3thSDK;
+			sourceTree = "<group>";
+		};
+		1DEE8BA21D226AD800DB6AA5 /* zhongyi.Config */ = {
+			isa = PBXGroup;
+			children = (
+				1DEE8BAF1D226E0400DB6AA5 /* Info.plist */,
+				1DEE8BAC1D226B9200DB6AA5 /* main.m */,
+			);
+			path = zhongyi.Config;
+			sourceTree = "<group>";
+		};
+		1DEE8BA31D226AD800DB6AA5 /* zhongyi.Resource */ = {
+			isa = PBXGroup;
+			children = (
+				1DEE8BA51D226B5B00DB6AA5 /* Assets.xcassets */,
+				1DEE8BA61D226B5B00DB6AA5 /* LaunchScreen.storyboard */,
+				1DEE8BA71D226B5B00DB6AA5 /* Main.storyboard */,
+			);
+			path = zhongyi.Resource;
+			sourceTree = "<group>";
+		};
+		1DEE8BA41D226AD800DB6AA5 /* zhongyi.Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = zhongyi.Tool;
+			sourceTree = "<group>";
+		};
+		3CC6EFCBFF041B519EA6F862 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				86BF91E674A42A6F764A49E3 /* libPods-zhongyi.sina.com.mobileApp.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B955AFC7897CDF8BD0E8795F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				60096A26FB662791EC3B38B9 /* Pods-zhongyi.sina.com.mobileApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6527BE1D225C4700E89D69 /* zhongyi.sina.com.mobileApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6527D61D225C4700E89D69 /* Build configuration list for PBXNativeTarget "zhongyi.sina.com.mobileApp" */;
+			buildPhases = (
+				637A8CB241FA74CB15EC88F6 /* [CP] Check Pods Manifest.lock */,
+				1D6527BB1D225C4700E89D69 /* Sources */,
+				1D6527BC1D225C4700E89D69 /* Frameworks */,
+				1D6527BD1D225C4700E89D69 /* Resources */,
+				CF7B3560D4D147A3B9D20645 /* [CP] Embed Pods Frameworks */,
+				DF0C3F0FEC3D6A0780F22843 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = zhongyi.sina.com.mobileApp;
+			productName = zhongyi.sina.com.mobileApp;
+			productReference = 1D6527BF1D225C4700E89D69 /* zhongyi.sina.com.mobileApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1D6527B71D225C4700E89D69 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = zhongyi;
+				TargetAttributes = {
+					1D6527BE1D225C4700E89D69 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 1D6527BA1D225C4700E89D69 /* Build configuration list for PBXProject "zhongyi.sina.com.mobileApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1D6527B61D225C4700E89D69;
+			productRefGroup = 1D6527C01D225C4700E89D69 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6527BE1D225C4700E89D69 /* zhongyi.sina.com.mobileApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D6527BD1D225C4700E89D69 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DEE8BB01D226E0400DB6AA5 /* Info.plist in Resources */,
+				1DEE8BAA1D226B5B00DB6AA5 /* Main.storyboard in Resources */,
+				1DEE8BA81D226B5B00DB6AA5 /* Assets.xcassets in Resources */,
+				1DEE8BA91D226B5B00DB6AA5 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		637A8CB241FA74CB15EC88F6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CF7B3560D4D147A3B9D20645 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-zhongyi.sina.com.mobileApp/Pods-zhongyi.sina.com.mobileApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF0C3F0FEC3D6A0780F22843 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-zhongyi.sina.com.mobileApp/Pods-zhongyi.sina.com.mobileApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D6527BB1D225C4700E89D69 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DEE8BB31D226EE000DB6AA5 /* AppDelegate.m in Sources */,
+				1DEE8BAE1D226B9200DB6AA5 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6527D41D225C4700E89D69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1D6527D51D225C4700E89D69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1D6527D71D225C4700E89D69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = zhongyi.sina.com.mobileApp/zhongyi.Config/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "zhongyi.Monkey.zhongyi-sina-com-mobileApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1D6527D81D225C4700E89D69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60096A26FB662791EC3B38B9 /* Pods-zhongyi.sina.com.mobileApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "zhongyi.Monkey.zhongyi-sina-com-mobileApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6527BA1D225C4700E89D69 /* Build configuration list for PBXProject "zhongyi.sina.com.mobileApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6527D41D225C4700E89D69 /* Debug */,
+				1D6527D51D225C4700E89D69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1D6527D61D225C4700E89D69 /* Build configuration list for PBXNativeTarget "zhongyi.sina.com.mobileApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6527D71D225C4700E89D69 /* Debug */,
+				1D6527D81D225C4700E89D69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1D6527B71D225C4700E89D69 /* Project object */;
+}
