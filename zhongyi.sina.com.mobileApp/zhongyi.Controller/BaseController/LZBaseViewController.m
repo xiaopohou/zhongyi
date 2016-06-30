@@ -35,7 +35,7 @@
 {
     if (_titleScrollView==nil) {
 
-        _titleScrollView=[[LZTitleScrollView alloc]initWithFrame:CGRectMake(0, 64, [UIScreen mainScreen].bounds.size.width, 137)];
+        _titleScrollView=[[LZTitleScrollView alloc]initWithFrame:CGRectMake(0, 64, [UIScreen mainScreen].bounds.size.width, 40)];
         _titleScrollView.titleArray=self.titleArray;
         _titleScrollView.titleDelegate=self;
     }
@@ -49,7 +49,7 @@
 //实现协议
 -(void) titleScrollView:(LZTitleScrollView *) sender withLabel:(UILabel *) lable
 {
-    
+    NSLog(@"hello");
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

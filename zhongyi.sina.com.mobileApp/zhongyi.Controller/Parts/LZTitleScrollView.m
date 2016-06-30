@@ -48,7 +48,8 @@
         titleLable.text=classModel.title;
         titleLable.textColor=[UIColor redColor];
         titleLable.textAlignment=NSTextAlignmentCenter;
-        titleLable.userInteractionEnabled=YES;
+        titleLable.userInteractionEnabled=YES;//可交互
+        [titleLable addGestureRecognizer:[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(classLableClick:)]];
         if (i==0) {
             titleLable.textColor = [UIColor colorWithRed:22.0/255.0 green:147.0/255.0 blue:114.0/255.0 alpha:1.0];
             titleLable.backgroundColor=[UIColor redColor];
@@ -63,6 +64,13 @@
 
 
 //点击事件
+-(void)classLableClick:(UITapGestureRecognizer *)sender
+{
+    UILabel *currentLable=(UILabel *)sender.view;
+    if ([self.titleDelegate respondsToSelector:@selector(titleScrollView:withLabel:)]) {
+        [self.titleDelegate titleScrollView:self withLabel:currentLable];
+    }
+}
 
 
 
