@@ -7,21 +7,26 @@
 //
 
 #import "LZHomeViewController.h"
-
+#import "LZClassModel.h"
 
 @implementation LZHomeViewController
 
--(id) init {
-    if (self=[super init]) {
-        
-    }
-    return  self;
-}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor=[UIColor whiteColor];
     
-
+    //很奇怪的一句话，不加的话导航栏会出现坐标不准的情况
+    self.automaticallyAdjustsScrollViewInsets=NO;
+    
+    
+    //对base类属性赋值
+    [LZClassModel loadModelList:@"class.plist" success:^(NSArray *result) {
+        self.titleArray=result;
+    }];
+    //调用base初始化组件
+    [self installWebUI];
 }
 
 - (void)didReceiveMemoryWarning {

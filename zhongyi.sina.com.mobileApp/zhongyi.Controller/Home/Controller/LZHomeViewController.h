@@ -6,8 +6,7 @@
 //  Copyright © 2016年 zhongyi. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
-@interface LZHomeViewController : UIViewController
+#import "LZBaseViewController.h"
+@interface LZHomeViewController : LZBaseViewController
 
 @end

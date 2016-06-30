@@ -10,7 +10,7 @@
 #import "LZHomeViewController.h"//首页
 #import "LZAboutMeViewController.h"//关于我们
 #import "LZSettingViewController.h"//设置
-#import "LZClassViewController.h"
+#import "LZClassViewController.h"//分类
 #import "LZNavigationViewController.h"
 
 
@@ -22,19 +22,17 @@
     
     [self LoadControllers];
 }
-//初始化底部tab
 -(void) LoadControllers
 {
     LZHomeViewController *homeView=[[LZHomeViewController alloc]init];
-    //homeView.title=@"导航标题";
     [self addController:homeView withTitle:@"首页" withIamgeUrl:@"tab_home"];
     
+    LZClassViewController *classView=[[LZClassViewController alloc]init];
+    [self addController:classView withTitle:@"分页" withIamgeUrl:@"topic_off"];
     
     LZAboutMeViewController *aboutView=[[LZAboutMeViewController alloc]init];
     [self addController:aboutView withTitle:@"关于我们" withIamgeUrl:@"tab_dis"];
     
-    LZClassViewController *classView=[[LZClassViewController alloc]init];
-    [self addController:classView withTitle:@"分类" withIamgeUrl:@"topic_off"];
     
     LZSettingViewController *settingView=[[LZSettingViewController alloc]init];
     [self addController:settingView withTitle:@"设置" withIamgeUrl:@"tab_user"];
