@@ -24,6 +24,9 @@ PODS:
     - Mantle/extobjc (= 2.0.7)
   - Mantle/extobjc (2.0.7)
   - MJRefresh (3.1.9)
+  - YYKit (1.0.7):
+    - YYKit/no-arc (= 1.0.7)
+  - YYKit/no-arc (1.0.7)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
@@ -31,6 +34,7 @@ DEPENDENCIES:
   - GRMustache (~> 7.3.2)
   - Mantle (~> 2.0.2)
   - MJRefresh (~> 3.1.0)
+  - YYKit (~> 1.0.7)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -39,7 +43,8 @@ SPEC CHECKSUMS:
   JRSwizzle: dd5ead5d913a0f29e7f558200165849f006bb1e3
   Mantle: bc40bb061d8c2c6fb48d5083e04d928c3b7f73d9
   MJRefresh: c5f1f1653e5a1b932c90f78074f2bc86f3f9bd5e
+  YYKit: 843d1b26e20b82c695790c9a89907eaa1e99907f
 
-PODFILE CHECKSUM: 04516d456055079b50d66dd6f84f60d8d90108c5
+PODFILE CHECKSUM: 1a5d27bf3fdcd5746baf09be1f4bb04e7ffdb7f3
 
 COCOAPODS: 1.0.1
