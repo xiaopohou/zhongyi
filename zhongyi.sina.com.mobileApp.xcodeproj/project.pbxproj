@@ -69,6 +69,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D464E251D24CB63000032B3 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		1D6527B61D225C4700E89D69 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +110,7 @@
 		1D6527DA1D22645100E89D69 /* zhongyi.Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1D464E251D24CB63000032B3 /* Cells */,
 				1DEE8BD01D22856E00DB6AA5 /* Detail */,
 				1DEE8B8C1D226A0E00DB6AA5 /* AboutMe */,
 				1DEE8B901D226A0E00DB6AA5 /* Class */,

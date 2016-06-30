@@ -26,6 +26,7 @@
 -(void) LoadControllers
 {
     LZHomeViewController *homeView=[[LZHomeViewController alloc]init];
+    //homeView.title=@"导航标题";
     [self addController:homeView withTitle:@"首页" withIamgeUrl:@"tab_home"];
     
     
