@@ -7,19 +7,46 @@
 //
 
 #import "LZMainTabBarViewController.h"
+#import "LZHomeViewController.h"//首页
+#import "LZAboutMeViewController.h"//关于我们
+#import "LZSettingViewController.h"//设置
+#import "LZClassViewController.h"
+#import "LZNavigationViewController.h"
+
+
 @implementation LZMainTabBarViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [self LoadControllers];
 }
+//初始化底部tab
 -(void) LoadControllers
 {
+    LZHomeViewController *homeView=[[LZHomeViewController alloc]init];
+    [self addController:homeView withTitle:@"首页" withIamgeUrl:@"tab_home"];
     
+    
+    LZAboutMeViewController *aboutView=[[LZAboutMeViewController alloc]init];
+    [self addController:aboutView withTitle:@"关于我们" withIamgeUrl:@"tab_dis"];
+    
+    LZClassViewController *classView=[[LZClassViewController alloc]init];
+    [self addController:classView withTitle:@"分类" withIamgeUrl:@"topic_off"];
+    
+    LZSettingViewController *settingView=[[LZSettingViewController alloc]init];
+    [self addController:settingView withTitle:@"设置" withIamgeUrl:@"tab_user"];
+    
+
 }
 
--(void) addController:(UIViewController *) view initImageUrl:(NSString *)imgurl
+-(void) addController:(UIViewController *) view withTitle:(NSString *)title withIamgeUrl:(NSString *) url
 {
+    view.tabBarItem.image=[UIImage imageNamed:url];
+    view.title=title;
+    LZNavigationViewController *nav=[[LZNavigationViewController alloc]initWithRootViewController:view];
+    [self addChildViewController:nav];
     
 }
 
