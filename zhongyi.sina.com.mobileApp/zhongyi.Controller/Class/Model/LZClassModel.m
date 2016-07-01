@@ -41,12 +41,7 @@
     NSArray *titleArray=[self loadModelWithPlistPath:str];
     callback(titleArray);
 }
-+(NSArray *) initArrayWithUrl:(NSString *) url
-{
-    
-    
-    return nil;
-}
+ 
 
 +(void) initDictWithRemoteUrl:(NSString *) url success:(successQueryClassBlock) callback
 {

@@ -53,9 +53,7 @@
         _contentScrollView.delegate=self;
         _contentScrollView.dataSource=self;
         _contentScrollView.pagingEnabled=YES;
-        
-        int count=self.titleArray.count;
-        
+
         for (int i = 0; i < self.titleArray.count; i++) {
             [_contentScrollView registerClass:[LZCollectionViewCell class] forCellWithReuseIdentifier:[NSString stringWithFormat:@"%@%d",customerCellId,i]];
         }

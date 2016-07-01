@@ -24,9 +24,10 @@
     //对base类属性赋值
     [LZClassModel initDictWithRemoteUrl:@"http://58.83.218.135:9999/api/iossource/queryclass"  success:^(NSArray *result) {
         self.titleArray=result;
-        //[self installWebUI];
+        
+        [self installWebUI];
         //调用base初始化组件
-        [self performSelectorOnMainThread:@selector(installWebUI) withObject:nil waitUntilDone:YES];
+        //[self performSelectorOnMainThread:@selector(installWebUI) withObject:nil waitUntilDone:YES];
     }];
     
     

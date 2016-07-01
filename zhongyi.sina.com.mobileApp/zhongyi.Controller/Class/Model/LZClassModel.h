@@ -24,6 +24,5 @@ typedef void(^successQueryClassBlock)(NSArray *result);
 +(instancetype) initTitleModelWithDict:(NSDictionary *)dict;
 
 +(void) initDictWithRemoteUrl:(NSString *) url success:(successQueryClassBlock) callback;
-
-+(NSArray *) initArrayWithUrl:(NSString *) url;
+ 
 @end
