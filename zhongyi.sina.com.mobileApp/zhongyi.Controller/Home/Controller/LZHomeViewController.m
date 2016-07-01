@@ -22,11 +22,16 @@
     
     
     //对base类属性赋值
-    [LZClassModel loadModelList:@"class.plist" success:^(NSArray *result) {
+    [LZClassModel initDictWithRemoteUrl:@"http://58.83.218.135:9999/api/iossource/queryclass"  success:^(NSArray *result) {
         self.titleArray=result;
+        //[self installWebUI];
+        //调用base初始化组件
+        [self performSelectorOnMainThread:@selector(installWebUI) withObject:nil waitUntilDone:YES];
     }];
-    //调用base初始化组件
-    [self installWebUI];
+    
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

@@ -9,8 +9,9 @@
 #import <Foundation/Foundation.h>
 
 typedef void(^successBlock)(NSArray * result);
-
+typedef void(^successQueryClassBlock)(NSArray *result);
 @interface LZClassModel : NSObject
+@property (nonatomic,strong) NSString *id;
 @property (nonatomic,strong) NSString * title;
 @property (nonatomic,strong) NSString *url;
 
@@ -21,4 +22,8 @@ typedef void(^successBlock)(NSArray * result);
 -(instancetype) initModelWithDict:(NSDictionary *) dict;
 
 +(instancetype) initTitleModelWithDict:(NSDictionary *)dict;
+
++(void) initDictWithRemoteUrl:(NSString *) url success:(successQueryClassBlock) callback;
+
++(NSArray *) initArrayWithUrl:(NSString *) url;
 @end

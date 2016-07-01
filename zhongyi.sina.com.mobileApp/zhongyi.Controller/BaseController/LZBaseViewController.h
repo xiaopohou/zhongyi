@@ -8,9 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "LZTitleScrollView.h"
-
+#import "LZContentCollectionView.h"
+#import "LZCollectionViewCell.h"
+#import "LZClassModel.h"
 @interface LZBaseViewController : UIViewController
 @property (nonatomic,strong) NSArray *titleArray;
 @property (nonatomic,strong) LZTitleScrollView *titleScrollView;
+@property (nonatomic,strong) LZContentCollectionView *contentScrollView;
+@property (nonatomic,strong) UICollectionViewFlowLayout *layoutView;
+ 
 -(void) installWebUI;
 @end

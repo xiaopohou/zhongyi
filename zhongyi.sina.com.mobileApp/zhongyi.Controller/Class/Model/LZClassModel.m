@@ -7,7 +7,7 @@
 //
 
 #import "LZClassModel.h"
-
+#import "LZHttpHelper.h"
 @implementation LZClassModel
 
 -(instancetype) initModelWithDict:(NSDictionary *) dict
@@ -41,6 +41,36 @@
     NSArray *titleArray=[self loadModelWithPlistPath:str];
     callback(titleArray);
 }
++(NSArray *) initArrayWithUrl:(NSString *) url
+{
+    
+    
+    return nil;
+}
 
++(void) initDictWithRemoteUrl:(NSString *) url success:(successQueryClassBlock) callback
+{
+    NSDictionary *dictResult=nil;
+
+    [LZHttpHelper getContentWithRetmoteUrl:url success:^(id responseObject) {
+        
+    NSError *error;
+
+    NSString *str=[NSJSONSerialization JSONObjectWithData:responseObject options: NSJSONReadingAllowFragments error:&error];
+
+    NSDictionary *jsonDict=[NSJSONSerialization JSONObjectWithData:[str dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:&error];
+
+    NSDictionary *dicList=jsonDict[@"data"];
+        
+    NSMutableArray *arrayList=[[NSMutableArray  alloc]initWithCapacity:dicList.count];
+     
+        for (NSDictionary *item in dicList) {
+            LZClassModel *classItem=[LZClassModel initTitleModelWithDict:item];
+            [arrayList addObject:classItem];
+            //NSLog(@"-------------------%@",classItem.title);
+        }
+        callback([arrayList copy]);
+    }];
+}
 
 @end

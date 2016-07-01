@@ -52,7 +52,7 @@
         [titleLable addGestureRecognizer:[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(classLableClick:)]];
         if (i==0) {
             titleLable.textColor = [UIColor colorWithRed:22.0/255.0 green:147.0/255.0 blue:114.0/255.0 alpha:1.0];
-            titleLable.backgroundColor=[UIColor redColor];
+            //titleLable.backgroundColor=[UIColor redColor];
         }
         [self addSubview:titleLable];
     }

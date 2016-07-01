@@ -14,10 +14,13 @@
 		1D464E341D24DC79000032B3 /* LZClassModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D464E331D24DC79000032B3 /* LZClassModel.m */; };
 		1D464E361D24F865000032B3 /* class.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1D464E351D24F865000032B3 /* class.plist */; };
 		1D4FC5171D235BA200361C57 /* LZNewsInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4FC5161D235BA200361C57 /* LZNewsInfo.m */; };
+		1DED301A1D25FC8B00DE57E2 /* LZHttpHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DED30191D25FC8B00DE57E2 /* LZHttpHelper.m */; };
+		1DED301F1D26147F00DE57E2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1DEE8BAF1D226E0400DB6AA5 /* Info.plist */; };
+		1DED30451D2654E300DE57E2 /* LZContentCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DED30441D2654E300DE57E2 /* LZContentCollectionView.m */; };
+		1DED30491D2656F900DE57E2 /* LZCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DED30481D2656F900DE57E2 /* LZCollectionViewCell.m */; };
 		1DEE8BA91D226B5B00DB6AA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DEE8BA61D226B5B00DB6AA5 /* LaunchScreen.storyboard */; };
 		1DEE8BAA1D226B5B00DB6AA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DEE8BA71D226B5B00DB6AA5 /* Main.storyboard */; };
 		1DEE8BAE1D226B9200DB6AA5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DEE8BAC1D226B9200DB6AA5 /* main.m */; };
-		1DEE8BB01D226E0400DB6AA5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1DEE8BAF1D226E0400DB6AA5 /* Info.plist */; };
 		1DEE8BB31D226EE000DB6AA5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DEE8BB21D226EE000DB6AA5 /* AppDelegate.m */; };
 		1DEE8BB61D227C7600DB6AA5 /* LZHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DEE8BB51D227C7600DB6AA5 /* LZHomeViewController.m */; };
 		1DEE8BBD1D227FF600DB6AA5 /* LZMainTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DEE8BBC1D227FF600DB6AA5 /* LZMainTabBarViewController.m */; };
@@ -43,6 +46,12 @@
 		1D4FC5151D235BA200361C57 /* LZNewsInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZNewsInfo.h; sourceTree = "<group>"; };
 		1D4FC5161D235BA200361C57 /* LZNewsInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZNewsInfo.m; sourceTree = "<group>"; };
 		1D6527BF1D225C4700E89D69 /* zhongyi.sina.com.mobileApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zhongyi.sina.com.mobileApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DED30181D25FC8B00DE57E2 /* LZHttpHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZHttpHelper.h; sourceTree = "<group>"; };
+		1DED30191D25FC8B00DE57E2 /* LZHttpHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZHttpHelper.m; sourceTree = "<group>"; };
+		1DED30431D2654E300DE57E2 /* LZContentCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZContentCollectionView.h; sourceTree = "<group>"; };
+		1DED30441D2654E300DE57E2 /* LZContentCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZContentCollectionView.m; sourceTree = "<group>"; };
+		1DED30471D2656F900DE57E2 /* LZCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZCollectionViewCell.h; sourceTree = "<group>"; };
+		1DED30481D2656F900DE57E2 /* LZCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZCollectionViewCell.m; sourceTree = "<group>"; };
 		1DEE8BA61D226B5B00DB6AA5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1DEE8BA71D226B5B00DB6AA5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		1DEE8BAC1D226B9200DB6AA5 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -80,6 +89,8 @@
 		1D464E251D24CB63000032B3 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				1DED304A1D26586100DE57E2 /* TableViewCell */,
+				1DED30461D2656C000DE57E2 /* CollectionViewCell */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -98,6 +109,8 @@
 			children = (
 				1D464E2E1D24D689000032B3 /* LZTitleScrollView.h */,
 				1D464E2F1D24D689000032B3 /* LZTitleScrollView.m */,
+				1DED30431D2654E300DE57E2 /* LZContentCollectionView.h */,
+				1DED30441D2654E300DE57E2 /* LZContentCollectionView.m */,
 			);
 			path = Parts;
 			sourceTree = "<group>";
@@ -147,6 +160,52 @@
 				1DEE8B9B1D226A0E00DB6AA5 /* Setting */,
 			);
 			path = zhongyi.Controller;
+			sourceTree = "<group>";
+		};
+		1DED30141D25FC6200DE57E2 /* CacheHelper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CacheHelper;
+			sourceTree = "<group>";
+		};
+		1DED30151D25FC6200DE57E2 /* HttpHelper */ = {
+			isa = PBXGroup;
+			children = (
+				1DED30181D25FC8B00DE57E2 /* LZHttpHelper.h */,
+				1DED30191D25FC8B00DE57E2 /* LZHttpHelper.m */,
+			);
+			path = HttpHelper;
+			sourceTree = "<group>";
+		};
+		1DED30161D25FC6200DE57E2 /* IOHeper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = IOHeper;
+			sourceTree = "<group>";
+		};
+		1DED30171D25FC6200DE57E2 /* StringHelper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = StringHelper;
+			sourceTree = "<group>";
+		};
+		1DED30461D2656C000DE57E2 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				1DED30471D2656F900DE57E2 /* LZCollectionViewCell.h */,
+				1DED30481D2656F900DE57E2 /* LZCollectionViewCell.m */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		1DED304A1D26586100DE57E2 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 		1DEE8B8C1D226A0E00DB6AA5 /* AboutMe */ = {
@@ -333,6 +392,10 @@
 		1DEE8BA41D226AD800DB6AA5 /* zhongyi.Tool */ = {
 			isa = PBXGroup;
 			children = (
+				1DED30151D25FC6200DE57E2 /* HttpHelper */,
+				1DED30141D25FC6200DE57E2 /* CacheHelper */,
+				1DED30161D25FC6200DE57E2 /* IOHeper */,
+				1DED30171D25FC6200DE57E2 /* StringHelper */,
 			);
 			path = zhongyi.Tool;
 			sourceTree = "<group>";
@@ -455,10 +518,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DEE8BB01D226E0400DB6AA5 /* Info.plist in Resources */,
 				1DEE8BAA1D226B5B00DB6AA5 /* Main.storyboard in Resources */,
 				1D464E361D24F865000032B3 /* class.plist in Resources */,
 				1D464E211D24C55F000032B3 /* Assets.xcassets in Resources */,
+				1DED301F1D26147F00DE57E2 /* Info.plist in Resources */,
 				1DEE8BA91D226B5B00DB6AA5 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -519,6 +582,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DEE8BB31D226EE000DB6AA5 /* AppDelegate.m in Sources */,
+				1DED301A1D25FC8B00DE57E2 /* LZHttpHelper.m in Sources */,
 				1DEE8BC01D2283CF00DB6AA5 /* LZNavigationViewController.m in Sources */,
 				1DEE8BC61D2284FF00DB6AA5 /* LZAboutMeViewController.m in Sources */,
 				1DEE8BBD1D227FF600DB6AA5 /* LZMainTabBarViewController.m in Sources */,
@@ -527,9 +591,11 @@
 				1D464E2C1D24D4A3000032B3 /* LZBaseViewController.m in Sources */,
 				1D464E341D24DC79000032B3 /* LZClassModel.m in Sources */,
 				1D464E281D24D3E1000032B3 /* LZClassViewController.m in Sources */,
+				1DED30451D2654E300DE57E2 /* LZContentCollectionView.m in Sources */,
 				1DEE8BD61D22858000DB6AA5 /* LZDetailViewController.m in Sources */,
 				1DEE8BAE1D226B9200DB6AA5 /* main.m in Sources */,
 				1DEE8BB61D227C7600DB6AA5 /* LZHomeViewController.m in Sources */,
+				1DED30491D2656F900DE57E2 /* LZCollectionViewCell.m in Sources */,
 				1DEE8BCC1D22851D00DB6AA5 /* LZSettingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
