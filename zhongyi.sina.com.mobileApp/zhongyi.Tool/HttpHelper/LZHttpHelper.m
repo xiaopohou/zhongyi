@@ -23,6 +23,10 @@
         
         //NSString *result=[[NSString alloc]initWithData:responseObject encoding:NSUTF8StringEncoding];
         success(responseObject);
+        
+//        NSNotification *message=[NSNotification notificationWithName:@"setUI" object:responseObject];
+//        [[NSNotificationCenter defaultCenter] postNotification:message];
+        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@",error);
     }];

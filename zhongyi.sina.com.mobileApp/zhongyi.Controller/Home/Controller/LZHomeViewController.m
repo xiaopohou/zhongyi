@@ -23,18 +23,35 @@
     
     //对base类属性赋值
     [LZClassModel initDictWithRemoteUrl:@"http://58.83.218.135:9999/api/iossource/queryclass"  success:^(NSArray *result) {
-        self.titleArray=result;
+//        self.titleArray=result;
+//        
+//        [self installWebUI];
         
-        [self installWebUI];
         //调用base初始化组件
         //[self performSelectorOnMainThread:@selector(installWebUI) withObject:nil waitUntilDone:YES];
     }];
     
     
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotificationMessage:) name:@"setUI" object:nil];
     
 }
+-(void) receiveNotificationMessage:(NSNotification *) notification
+{
+    if ([[notification name] isEqualToString:@"setUI"]) {
+      NSDictionary *dictInfo=  notification.userInfo;
+        
+    NSArray *reustData=dictInfo[@"classlist"];
+        
+    NSLog(@"---------收到更新UI通知,返回数据:%@",reustData);
+        
+    self.titleArray=reustData;
+        
+    [self installWebUI];
+        
+    }
+    
 
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
