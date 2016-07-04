@@ -44,6 +44,9 @@
         
         _titleScrollView.titleArray=self.titleArray;
         _titleScrollView.titleDelegate=self;
+        
+    NSLog(@"--C--->%d",self.titleArray.count);  
+        
     }
     return _titleScrollView;
 }
@@ -51,6 +54,9 @@
 -(LZContentCollectionView *) contentScrollView
 {
     if (_contentScrollView==nil) {
+        
+        NSLog(@"--F--->%d",self.titleArray.count);
+        
         //可操作区域=总高-头、底部控件高度
         
         //此句话不能解除注释，否则下面的collectionview就会出现位置错误，导致滚动菜单看不见了
@@ -65,8 +71,8 @@
         
         _contentScrollView=[[LZContentCollectionView alloc]initWithFrame:CGRectMake(0, 101, ScreenW,586) collectionViewLayout:self.layoutView];
 
-        _contentScrollView.delegate=self;
-        _contentScrollView.dataSource=self;
+//        _contentScrollView.delegate=self;
+//        _contentScrollView.dataSource=self;
         _contentScrollView.pagingEnabled=YES;
 
 
@@ -100,9 +106,9 @@
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    LZCollectionViewCell *cellItem=nil;
+    LZCollectionViewCell *cellItem=[collectionView dequeueReusableCellWithReuseIdentifier:[NSString stringWithFormat:@"%@%d",customerCellId,(int)indexPath.row] forIndexPath:indexPath];
+;
     
-    cellItem=[collectionView dequeueReusableCellWithReuseIdentifier:[NSString stringWithFormat:@"%@%d",customerCellId,(int)indexPath.row] forIndexPath:indexPath];
     LZClassModel *classModel=self.titleArray[indexPath.row];
     cellItem.url=classModel.url;
     cellItem.title=classModel.title;
@@ -114,7 +120,7 @@
     
     [self.view addSubview:self.titleScrollView];
     
-    //[self.view addSubview:self.contentScrollView];
+    [self.view addSubview:self.contentScrollView];
 }
 
 //实现协议

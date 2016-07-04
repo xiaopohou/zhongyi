@@ -13,7 +13,7 @@
 -(instancetype)  initWithFrame:(CGRect)frame collectionViewLayout:(UICollectionViewFlowLayout*) layout
 {
     if (self=[super initWithFrame:frame  collectionViewLayout:layout]) {
-        self.backgroundColor=[UIColor redColor];
+        self.backgroundColor=[UIColor darkGrayColor];
     }
     return  self;
 }
