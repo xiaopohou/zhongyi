@@ -19,7 +19,6 @@
 		1DED30451D2654E300DE57E2 /* LZContentCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DED30441D2654E300DE57E2 /* LZContentCollectionView.m */; };
 		1DED30491D2656F900DE57E2 /* LZCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DED30481D2656F900DE57E2 /* LZCollectionViewCell.m */; };
 		1DEE8BA91D226B5B00DB6AA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DEE8BA61D226B5B00DB6AA5 /* LaunchScreen.storyboard */; };
-		1DEE8BAA1D226B5B00DB6AA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DEE8BA71D226B5B00DB6AA5 /* Main.storyboard */; };
 		1DEE8BAE1D226B9200DB6AA5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DEE8BAC1D226B9200DB6AA5 /* main.m */; };
 		1DEE8BB31D226EE000DB6AA5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DEE8BB21D226EE000DB6AA5 /* AppDelegate.m */; };
 		1DEE8BB61D227C7600DB6AA5 /* LZHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DEE8BB51D227C7600DB6AA5 /* LZHomeViewController.m */; };
@@ -28,6 +27,8 @@
 		1DEE8BC61D2284FF00DB6AA5 /* LZAboutMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DEE8BC51D2284FF00DB6AA5 /* LZAboutMeViewController.m */; };
 		1DEE8BCC1D22851D00DB6AA5 /* LZSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DEE8BCB1D22851D00DB6AA5 /* LZSettingViewController.m */; };
 		1DEE8BD61D22858000DB6AA5 /* LZDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DEE8BD51D22858000DB6AA5 /* LZDetailViewController.m */; };
+		1DF4217D1D2A0EA900D2FA04 /* LZCollectionViewContentTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF4217C1D2A0EA900D2FA04 /* LZCollectionViewContentTableView.m */; };
+		1DF421801D2A72A600D2FA04 /* LZTTestBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF4217F1D2A72A600D2FA04 /* LZTTestBaseViewController.m */; };
 		F79AE99E43EA13AA6A04F2D7 /* libPods-zhongyi.sina.com.mobileApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 86BF91E674A42A6F764A49E3 /* libPods-zhongyi.sina.com.mobileApp.a */; };
 /* End PBXBuildFile section */
 
@@ -53,7 +54,6 @@
 		1DED30471D2656F900DE57E2 /* LZCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZCollectionViewCell.h; sourceTree = "<group>"; };
 		1DED30481D2656F900DE57E2 /* LZCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZCollectionViewCell.m; sourceTree = "<group>"; };
 		1DEE8BA61D226B5B00DB6AA5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		1DEE8BA71D226B5B00DB6AA5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		1DEE8BAC1D226B9200DB6AA5 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1DEE8BAF1D226E0400DB6AA5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DEE8BB11D226EE000DB6AA5 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -70,6 +70,10 @@
 		1DEE8BCB1D22851D00DB6AA5 /* LZSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZSettingViewController.m; sourceTree = "<group>"; };
 		1DEE8BD41D22858000DB6AA5 /* LZDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZDetailViewController.h; sourceTree = "<group>"; };
 		1DEE8BD51D22858000DB6AA5 /* LZDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZDetailViewController.m; sourceTree = "<group>"; };
+		1DF4217B1D2A0EA900D2FA04 /* LZCollectionViewContentTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZCollectionViewContentTableView.h; sourceTree = "<group>"; };
+		1DF4217C1D2A0EA900D2FA04 /* LZCollectionViewContentTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZCollectionViewContentTableView.m; sourceTree = "<group>"; };
+		1DF4217E1D2A72A600D2FA04 /* LZTTestBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZTTestBaseViewController.h; sourceTree = "<group>"; };
+		1DF4217F1D2A72A600D2FA04 /* LZTTestBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZTTestBaseViewController.m; sourceTree = "<group>"; };
 		86BF91E674A42A6F764A49E3 /* libPods-zhongyi.sina.com.mobileApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-zhongyi.sina.com.mobileApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4BF94A2A7D81442B984C225 /* Pods-zhongyi.sina.com.mobileApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zhongyi.sina.com.mobileApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-zhongyi.sina.com.mobileApp/Pods-zhongyi.sina.com.mobileApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -204,6 +208,8 @@
 		1DED304A1D26586100DE57E2 /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				1DF4217B1D2A0EA900D2FA04 /* LZCollectionViewContentTableView.h */,
+				1DF4217C1D2A0EA900D2FA04 /* LZCollectionViewContentTableView.m */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -298,6 +304,8 @@
 				1DEE8BBC1D227FF600DB6AA5 /* LZMainTabBarViewController.m */,
 				1DEE8BBE1D2283CF00DB6AA5 /* LZNavigationViewController.h */,
 				1DEE8BBF1D2283CF00DB6AA5 /* LZNavigationViewController.m */,
+				1DF4217E1D2A72A600D2FA04 /* LZTTestBaseViewController.h */,
+				1DF4217F1D2A72A600D2FA04 /* LZTTestBaseViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -384,7 +392,6 @@
 			children = (
 				1D464E201D24C55F000032B3 /* Assets.xcassets */,
 				1DEE8BA61D226B5B00DB6AA5 /* LaunchScreen.storyboard */,
-				1DEE8BA71D226B5B00DB6AA5 /* Main.storyboard */,
 			);
 			path = zhongyi.Resource;
 			sourceTree = "<group>";
@@ -518,7 +525,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DEE8BAA1D226B5B00DB6AA5 /* Main.storyboard in Resources */,
 				1D464E361D24F865000032B3 /* class.plist in Resources */,
 				1D464E211D24C55F000032B3 /* Assets.xcassets in Resources */,
 				1DED301F1D26147F00DE57E2 /* Info.plist in Resources */,
@@ -581,6 +587,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DF421801D2A72A600D2FA04 /* LZTTestBaseViewController.m in Sources */,
 				1DEE8BB31D226EE000DB6AA5 /* AppDelegate.m in Sources */,
 				1DED301A1D25FC8B00DE57E2 /* LZHttpHelper.m in Sources */,
 				1DEE8BC01D2283CF00DB6AA5 /* LZNavigationViewController.m in Sources */,
@@ -591,6 +598,7 @@
 				1D464E2C1D24D4A3000032B3 /* LZBaseViewController.m in Sources */,
 				1D464E341D24DC79000032B3 /* LZClassModel.m in Sources */,
 				1D464E281D24D3E1000032B3 /* LZClassViewController.m in Sources */,
+				1DF4217D1D2A0EA900D2FA04 /* LZCollectionViewContentTableView.m in Sources */,
 				1DED30451D2654E300DE57E2 /* LZContentCollectionView.m in Sources */,
 				1DEE8BD61D22858000DB6AA5 /* LZDetailViewController.m in Sources */,
 				1DEE8BAE1D226B9200DB6AA5 /* main.m in Sources */,
@@ -689,6 +697,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = zhongyi.sina.com.mobileApp/zhongyi.Config/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "zhongyi.Monkey.zhongyi-sina-com-mobileApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -700,6 +709,7 @@
 			baseConfigurationReference = D4BF94A2A7D81442B984C225 /* Pods-zhongyi.sina.com.mobileApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "zhongyi.Monkey.zhongyi-sina-com-mobileApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "LZClassModel.h"
+
 
 @interface LZCollectionViewCell : UICollectionViewCell
 @property (nonatomic,strong) NSString *id;
 @property (nonatomic,strong) NSString *title;
-@property (nonatomic,strong) LZClassModel *model;
+@property (nonatomic,strong) NSString *url;
 @end

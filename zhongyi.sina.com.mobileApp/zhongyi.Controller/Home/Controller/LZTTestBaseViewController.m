@@ -1,28 +1,25 @@
 //
-//  LZBaseViewController.m
+//  LZTTestBaseViewController.m
 //  zhongyi.sina.com.mobileApp
 //
-//  Created by Monkey on 16/6/30.
+//  Created by Monkey on 16/7/4.
 //  Copyright © 2016年 zhongyi. All rights reserved.
 //
 
-#import "LZBaseViewController.h"
-
+#import "LZTTestBaseViewController.h"
 #define ScreenW [UIScreen mainScreen].bounds.size.width
 #define ScreenH [UIScreen mainScreen].bounds.size.height
 #define customerCellId @"customercellId"
-//实现协议
-@interface LZBaseViewController ()<LZTitleScrollTitleDelegate>
+
+@interface LZTTestBaseViewController ()<LZTitleScrollTitleDelegate>
 
 @end
 
-
-
-@implementation LZBaseViewController
+@implementation LZTTestBaseViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
+    
     self.automaticallyAdjustsScrollViewInsets = NO;
 }
 
@@ -39,8 +36,8 @@
 -(LZTitleScrollView *)titleScrollView
 {
     if (_titleScrollView==nil) {
-
-        _titleScrollView=[[LZTitleScrollView alloc]initWithFrame:CGRectMake(0, 64, [UIScreen mainScreen].bounds.size.width, 237)];
+        
+        _titleScrollView=[[LZTitleScrollView alloc]initWithFrame:CGRectMake(0, 64, [UIScreen mainScreen].bounds.size.width, 37)];
         
         _titleScrollView.titleArray=self.titleArray;
         _titleScrollView.titleDelegate=self;
@@ -56,8 +53,8 @@
 //        _contentScrollView.delegate=self;
 //        _contentScrollView.dataSource=self;
 //        _contentScrollView.pagingEnabled=YES;
-//
-//
+//        
+//        
 //        for (int i = 0; i < self.titleArray.count; i++) {
 //            [_contentScrollView registerClass:[LZCollectionViewCell class] forCellWithReuseIdentifier:[NSString stringWithFormat:@"%@%d",customerCellId,i]];
 //        }
@@ -73,16 +70,19 @@
 //        _layoutView.scrollDirection=UICollectionViewScrollDirectionHorizontal;
 //        _layoutView.minimumInteritemSpacing=0;
 //        _layoutView.minimumLineSpacing=0;
-//
+//        
 //    }
 //    return _layoutView;
 //}
 
-#pragma uicollectionview的数据源代理方法
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+
+-(void) titleScrollView:(LZTitleScrollView *) sender withLabel:(UILabel *) lable
 {
-    NSLog(@"collectioncell数量：---%ld",self.titleArray.count);
-    return self.titleArray.count;
+       NSLog(@"hello");
+}
+#pragma uicollectionview的数据源代理
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)sectio{
+    return  self.titleArray.count;
 }
 
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
@@ -97,22 +97,15 @@
     return cellItem;
 }
 
--(void) installWebUI
+-(void) setWebUI
 {
-    
     [self.view addSubview:self.titleScrollView];
-    
-    //[self.view addSubview:self.contentScrollView];
-}
-
-//实现协议
--(void) titleScrollView:(LZTitleScrollView *) sender withLabel:(UILabel *) lable
-{
-    NSLog(@"hello");
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 @end

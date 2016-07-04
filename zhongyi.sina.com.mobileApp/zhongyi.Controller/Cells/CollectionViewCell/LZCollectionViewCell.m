@@ -7,13 +7,32 @@
 //
 
 #import "LZCollectionViewCell.h"
+#import "LZCollectionViewContentTableView.h"
+
+@interface LZCollectionViewCell()
+@property (nonatomic,strong) LZCollectionViewContentTableView *CollectionViewContentTableView;
+@end
+
 
 @implementation LZCollectionViewCell
--(void) setModel:(LZClassModel *)model
+-(LZCollectionViewContentTableView *) CollectionViewContentTableView
 {
-    _model=model;
-//    UILabel *lable=[[UILabel alloc]initWithFrame:CGRectMake(0, 100, 100, 40)];
-//    lable.text=_model.title;
-//    [self.contentView addSubview:lable];
+    if (_CollectionViewContentTableView==nil) {
+        _CollectionViewContentTableView=[[LZCollectionViewContentTableView alloc]init];
+    }
+    return  _CollectionViewContentTableView;
+}
+
+-(void) setUrl:(NSString *)url
+{
+    _url=url;
+}
+-(void) setTitle:(NSString *)title
+{
+    _title=title;
+    self.CollectionViewContentTableView.title=_title;
+    self.CollectionViewContentTableView.url=_url;
+    self.CollectionViewContentTableView.tableView.frame=self.bounds;
+    [self.contentView addSubview:self.CollectionViewContentTableView];
 }
 @end

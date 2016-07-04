@@ -65,11 +65,11 @@
             //NSLog(@"-------------------%@",classItem.title);
         }
         
-        NSDictionary *userDataInfo=[NSDictionary  dictionaryWithObject:arrayList forKey:@"classlist"];
-        
-            NSNotification *message=[NSNotification notificationWithName:@"setUI" object:nil userInfo:userDataInfo];
-    
-            [[NSNotificationCenter defaultCenter] postNotification:message];
+//        NSDictionary *userDataInfo=[NSDictionary  dictionaryWithObject:arrayList forKey:@"classlist"];
+//        
+//            NSNotification *message=[NSNotification notificationWithName:@"setUI" object:nil userInfo:userDataInfo];
+//    
+//            [[NSNotificationCenter defaultCenter] postNotification:message];
         
         callback([arrayList copy]);
     }];

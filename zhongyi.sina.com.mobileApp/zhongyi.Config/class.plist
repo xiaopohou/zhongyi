@@ -6,7 +6,19 @@
 		<key>title</key>
 		<string>热点</string>
 		<key>url</key>
-		<string>http://www.baidu.com</string>
+		<string></string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>图库</string>
+		<key>url</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>图文</string>
+		<key>url</key>
+		<string></string>
 	</dict>
 </array>
 </plist>
