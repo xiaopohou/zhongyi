@@ -10,10 +10,10 @@
 
 @implementation LZContentCollectionView
 
--(instancetype)  initWithFrame:(CGRect)frame withLayout:(UICollectionViewFlowLayout*) layout
+-(instancetype)  initWithFrame:(CGRect)frame collectionViewLayout:(UICollectionViewFlowLayout*) layout
 {
     if (self=[super initWithFrame:frame  collectionViewLayout:layout]) {
-        self.backgroundColor=[UIColor whiteColor];
+        self.backgroundColor=[UIColor redColor];
     }
     return  self;
 }

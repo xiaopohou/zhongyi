@@ -40,7 +40,7 @@
 {
     if (_titleScrollView==nil) {
 
-        _titleScrollView=[[LZTitleScrollView alloc]initWithFrame:CGRectMake(0, 64, [UIScreen mainScreen].bounds.size.width, 237)];
+        _titleScrollView=[[LZTitleScrollView alloc]initWithFrame:CGRectMake(0, 64, [UIScreen mainScreen].bounds.size.width, 37)];
         
         _titleScrollView.titleArray=self.titleArray;
         _titleScrollView.titleDelegate=self;
@@ -48,35 +48,47 @@
     return _titleScrollView;
 }
 //左右滑动滑动容器
-//-(LZContentCollectionView *) contentScrollView
-//{
-//    if (_contentScrollView==nil) {
-//        //可操作区域=总高-头、底部控件高度
-//        _contentScrollView=[[LZContentCollectionView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(self.titleScrollView.frame), ScreenW,ScreenH-CGRectGetMaxX(self.titleScrollView.frame)-49) collectionViewLayout:self.layoutView];
-//        _contentScrollView.delegate=self;
-//        _contentScrollView.dataSource=self;
-//        _contentScrollView.pagingEnabled=YES;
-//
-//
-//        for (int i = 0; i < self.titleArray.count; i++) {
-//            [_contentScrollView registerClass:[LZCollectionViewCell class] forCellWithReuseIdentifier:[NSString stringWithFormat:@"%@%d",customerCellId,i]];
-//        }
-//    }
-//    return _contentScrollView;
-//}
-//
-//-(UICollectionViewFlowLayout *) layoutView
-//{
-//    if (_layoutView==nil) {
-//        _layoutView=[[UICollectionViewFlowLayout alloc]init];
-//        _layoutView.itemSize=self.contentScrollView.bounds.size;
-//        _layoutView.scrollDirection=UICollectionViewScrollDirectionHorizontal;
-//        _layoutView.minimumInteritemSpacing=0;
-//        _layoutView.minimumLineSpacing=0;
-//
-//    }
-//    return _layoutView;
-//}
+-(LZContentCollectionView *) contentScrollView
+{
+    if (_contentScrollView==nil) {
+        //可操作区域=总高-头、底部控件高度
+        
+        //此句话不能解除注释，否则下面的collectionview就会出现位置错误，导致滚动菜单看不见了
+ 
+//        CGFloat collectViewHeight=ScreenH-CGRectGetMaxY(self.titleScrollView.frame)-49;
+//        CGFloat collectViewWeight=CGRectGetMaxY(self.titleScrollView.frame);
+        
+//        NSLog(@"--A--->%f",collectViewHeight);   //110
+//        
+//        NSLog(@"--B--->%f",collectViewWeight);   //586
+        
+        
+        _contentScrollView=[[LZContentCollectionView alloc]initWithFrame:CGRectMake(0, 101, ScreenW,586) collectionViewLayout:self.layoutView];
+
+        _contentScrollView.delegate=self;
+        _contentScrollView.dataSource=self;
+        _contentScrollView.pagingEnabled=YES;
+
+
+        for (int i = 0; i < self.titleArray.count; i++) {
+            [_contentScrollView registerClass:[LZCollectionViewCell class] forCellWithReuseIdentifier:[NSString stringWithFormat:@"%@%d",customerCellId,i]];
+        }
+    }
+    return _contentScrollView;
+}
+
+-(UICollectionViewFlowLayout *) layoutView
+{
+    if (_layoutView==nil) {
+        _layoutView=[[UICollectionViewFlowLayout alloc]init];
+        _layoutView.itemSize=self.contentScrollView.bounds.size;
+        _layoutView.scrollDirection=UICollectionViewScrollDirectionHorizontal;
+        _layoutView.minimumInteritemSpacing=0;
+        _layoutView.minimumLineSpacing=0;
+
+    }
+    return _layoutView;
+}
 
 #pragma uicollectionview的数据源代理方法
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section

@@ -36,6 +36,7 @@
     //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotificationMessage:) name:@"setUI" object:nil];
     
 #pragma 临时加载本地配置文件返回菜单数据
+    [self setNav];
     
     self.titleArray=[LZClassModel loadModelWithPlistPath:@"class.plist"];
     
@@ -47,6 +48,23 @@
     
 }
 
+-(void) setNav
+{
+    UIBarButtonItem *leftItem=[[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"search-night"] style:UIBarButtonItemStylePlain target:self action:@selector(leftItemClick:)];
+    UIBarButtonItem *rightItem=[[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"more-night"] style:UIBarButtonItemStylePlain target:self action:@selector(rightItemClick:)];
+    
+    self.navigationItem.leftBarButtonItem=leftItem;
+    self.navigationItem.rightBarButtonItem=rightItem;
+    
+}
+-(void)leftItemClick:(UIBarButtonItem *) sender
+{
+    NSLog(@"搜索点击");
+}
+-(void)rightItemClick:(UIBarButtonItem *) sender
+{
+     NSLog(@"more点击");
+}
 //-(void) receiveNotificationMessage:(NSNotification *) notification
 //{
 //    if ([[notification name] isEqualToString:@"setUI"]) {
