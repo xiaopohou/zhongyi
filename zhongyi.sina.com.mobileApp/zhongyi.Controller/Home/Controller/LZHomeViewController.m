@@ -11,7 +11,14 @@
 
 @implementation LZHomeViewController
 
-
+-(instancetype) init
+{
+    if (self=[super init]) {
+        
+           self.titleArray=[LZClassModel loadModelWithPlistPath:@"class.plist"];
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -38,13 +45,8 @@
 #pragma 临时加载本地配置文件返回菜单数据
     [self setNav];
     
-    self.titleArray=[LZClassModel loadModelWithPlistPath:@"class.plist"];
-    
+ 
     [self installWebUI];
-    
-//    self.titleArray=[LZClassModel loadModelWithPlistPath:@"class.plist"];
-//    [self setWebUI];
-    
     
 }
 

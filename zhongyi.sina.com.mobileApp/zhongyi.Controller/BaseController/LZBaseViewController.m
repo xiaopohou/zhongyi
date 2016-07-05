@@ -20,6 +20,8 @@
 
 @implementation LZBaseViewController
 
+//@synthesize titleArray=_titleArray;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
    
@@ -69,10 +71,10 @@
 //        NSLog(@"--B--->%f",collectViewWeight);   //586
         
         
-        _contentScrollView=[[LZContentCollectionView alloc]initWithFrame:CGRectMake(0, 101, ScreenW,586) collectionViewLayout:self.layoutView];
+        _contentScrollView=[[LZContentCollectionView alloc]initWithFrame:CGRectMake(0, 111, ScreenW,586) collectionViewLayout:self.layoutView];
 
 //        _contentScrollView.delegate=self;
-//        _contentScrollView.dataSource=self;
+        //_contentScrollView.dataSource=self;
         _contentScrollView.pagingEnabled=YES;
 
 

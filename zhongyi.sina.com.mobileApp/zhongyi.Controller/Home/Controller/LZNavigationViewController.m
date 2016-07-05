@@ -20,6 +20,14 @@
     // Do any additional setup after loading the view.
 }
 
+-(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
+    
+    [super pushViewController:viewController animated:YES];
+    
+    //[self addbackBtn:viewController];
+    
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

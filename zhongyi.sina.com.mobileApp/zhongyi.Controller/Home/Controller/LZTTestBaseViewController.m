@@ -45,35 +45,35 @@
     return _titleScrollView;
 }
 //左右滑动滑动容器
-//-(LZContentCollectionView *) contentScrollView
-//{
-//    if (_contentScrollView==nil) {
-//        //可操作区域=总高-头、底部控件高度
-//        _contentScrollView=[[LZContentCollectionView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(self.titleScrollView.frame), ScreenW,ScreenH-CGRectGetMaxX(self.titleScrollView.frame)-49) collectionViewLayout:self.layoutView];
-//        _contentScrollView.delegate=self;
-//        _contentScrollView.dataSource=self;
-//        _contentScrollView.pagingEnabled=YES;
-//        
-//        
-//        for (int i = 0; i < self.titleArray.count; i++) {
-//            [_contentScrollView registerClass:[LZCollectionViewCell class] forCellWithReuseIdentifier:[NSString stringWithFormat:@"%@%d",customerCellId,i]];
-//        }
-//    }
-//    return _contentScrollView;
-//}
-//
-//-(UICollectionViewFlowLayout *) layoutView
-//{
-//    if (_layoutView==nil) {
-//        _layoutView=[[UICollectionViewFlowLayout alloc]init];
-//        _layoutView.itemSize=self.contentScrollView.bounds.size;
-//        _layoutView.scrollDirection=UICollectionViewScrollDirectionHorizontal;
-//        _layoutView.minimumInteritemSpacing=0;
-//        _layoutView.minimumLineSpacing=0;
-//        
-//    }
-//    return _layoutView;
-//}
+-(LZContentCollectionView *) contentScrollView
+{
+    if (_contentScrollView==nil) {
+        //可操作区域=总高-头、底部控件高度
+        _contentScrollView=[[LZContentCollectionView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(self.titleScrollView.frame), ScreenW,ScreenH-CGRectGetMaxX(self.titleScrollView.frame)-49) collectionViewLayout:self.layoutView];
+        _contentScrollView.delegate=self;
+        _contentScrollView.dataSource=self;
+        _contentScrollView.pagingEnabled=YES;
+        
+        
+        for (int i = 0; i < self.titleArray.count; i++) {
+            [_contentScrollView registerClass:[LZCollectionViewCell class] forCellWithReuseIdentifier:[NSString stringWithFormat:@"%@%d",customerCellId,i]];
+        }
+    }
+    return _contentScrollView;
+}
+
+-(UICollectionViewFlowLayout *) layoutView
+{
+    if (_layoutView==nil) {
+        _layoutView=[[UICollectionViewFlowLayout alloc]init];
+        _layoutView.itemSize=self.contentScrollView.bounds.size;
+        _layoutView.scrollDirection=UICollectionViewScrollDirectionHorizontal;
+        _layoutView.minimumInteritemSpacing=0;
+        _layoutView.minimumLineSpacing=0;
+        
+    }
+    return _layoutView;
+}
 
 
 -(void) titleScrollView:(LZTitleScrollView *) sender withLabel:(UILabel *) lable
@@ -100,6 +100,7 @@
 -(void) setWebUI
 {
     [self.view addSubview:self.titleScrollView];
+    [self.view addSubview:self.contentScrollView];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

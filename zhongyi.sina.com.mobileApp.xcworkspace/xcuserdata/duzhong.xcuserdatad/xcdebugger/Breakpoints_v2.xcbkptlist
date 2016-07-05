@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "zhongyi.sina.com.mobileApp/zhongyi.Controller/BaseController/LZBaseViewController.m"
-            timestampString = "489314803.440551"
+            filePath = "zhongyi.sina.com.mobileApp/zhongyi.Controller/Home/Controller/LZTTestBaseViewController.m"
+            timestampString = "489376082.827644"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
-            landmarkName = "-collectionView:numberOfItemsInSection:"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "-setWebUI"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "zhongyi.sina.com.mobileApp/zhongyi.Controller/BaseController/LZBaseViewController.m"
-            timestampString = "489314803.440551"
+            filePath = "zhongyi.sina.com.mobileApp/zhongyi.Controller/Home/Controller/LZTTestBaseViewController.m"
+            timestampString = "489376083.127794"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
-            landmarkName = "-collectionView:cellForItemAtIndexPath:"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "-setWebUI"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

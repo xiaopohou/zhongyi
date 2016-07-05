@@ -30,6 +30,14 @@
 -(void) setTitle:(NSString *)title
 {
     _title=title;
+    if ([_title isEqualToString:@"热点"]) {
+        self.backgroundColor=[UIColor blueColor];
+    }
+    else if([_title isEqualToString:@"图库"]  )
+    {
+        self.backgroundColor=[UIColor yellowColor];
+
+    }
     self.CollectionViewContentTableView.title=_title;
     self.CollectionViewContentTableView.url=_url;
     self.CollectionViewContentTableView.tableView.frame=self.bounds;
