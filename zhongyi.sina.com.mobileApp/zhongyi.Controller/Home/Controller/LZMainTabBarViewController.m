@@ -29,15 +29,15 @@
     LZHomeViewController *homeView=[[LZHomeViewController alloc]init];
     [self addController:homeView withTitle:@"首页" withIamgeUrl:@"tab_home"];
     
-//    LZClassViewController *classView=[[LZClassViewController alloc]init];
-//    [self addController:classView withTitle:@"分页" withIamgeUrl:@"topic_off"];
-//    
-//    LZAboutMeViewController *aboutView=[[LZAboutMeViewController alloc]init];
-//    [self addController:aboutView withTitle:@"关于我们" withIamgeUrl:@"tab_dis"];
-//    
-//    
-//    LZSettingViewController *settingView=[[LZSettingViewController alloc]init];
-//    [self addController:settingView withTitle:@"设置" withIamgeUrl:@"tab_user"];
+    LZClassViewController *classView=[[LZClassViewController alloc]init];
+    [self addController:classView withTitle:@"分页" withIamgeUrl:@"topic_off"];
+    
+    LZAboutMeViewController *aboutView=[[LZAboutMeViewController alloc]init];
+    [self addController:aboutView withTitle:@"关于我们" withIamgeUrl:@"tab_dis"];
+    
+    
+    LZSettingViewController *settingView=[[LZSettingViewController alloc]init];
+    [self addController:settingView withTitle:@"设置" withIamgeUrl:@"tab_user"];
     
 
 }

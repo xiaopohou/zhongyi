@@ -46,7 +46,7 @@
         titleLable.tag=i;
         titleLable.frame=CGRectMake(titleLableX, titleLableY, titleLabelWith, titleLableH);
         titleLable.text=classModel.title;
-        titleLable.textColor=[UIColor redColor];
+        titleLable.textColor=[UIColor whiteColor];
         titleLable.textAlignment=NSTextAlignmentCenter;
         titleLable.userInteractionEnabled=YES;//可交互
         [titleLable addGestureRecognizer:[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(classLableClick:)]];

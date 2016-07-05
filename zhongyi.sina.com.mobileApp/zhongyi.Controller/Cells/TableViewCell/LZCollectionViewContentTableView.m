@@ -25,13 +25,16 @@
 }
 -(void) LoadItemTableData
 {
-    if ([self.title isEqualToString:@"热门"]) {
+    if ([self.title isEqualToString:@"热点"]) {
         NSLog(@"热门");
-        self.view.backgroundColor=[UIColor darkGrayColor];
+        self.view.backgroundColor=[UIColor whiteColor];
     }
-    else
+    else if([self.title isEqualToString:@"图库"])
     {
-        
+        self.view.backgroundColor=[UIColor yellowColor];
+    }else
+    {
+        self.view.backgroundColor=[UIColor blueColor];
     }
     [self.tableView reloadData];
 }
@@ -48,15 +51,15 @@
     return 0;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reuseIdentifier" forIndexPath:indexPath];
     
-    // Configure the cell...
+    
     
     return cell;
 }
-*/
+ 
 
 /*
 // Override to support conditional editing of the table view.

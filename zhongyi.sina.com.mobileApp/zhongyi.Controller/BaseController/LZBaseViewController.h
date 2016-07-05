@@ -16,7 +16,8 @@
 @property (nonatomic,strong) LZTitleScrollView *titleScrollView;
 @property (nonatomic,strong) LZContentCollectionView *contentScrollView;
 @property (nonatomic,strong) UICollectionViewFlowLayout *layoutView;
- 
+
+@property (nonatomic,assign) NSInteger lastIndex;
 -(void) installWebUI;
 
 @end

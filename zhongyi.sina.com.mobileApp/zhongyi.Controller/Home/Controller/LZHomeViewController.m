@@ -44,8 +44,7 @@
     
 #pragma 临时加载本地配置文件返回菜单数据
     [self setNav];
-    
- 
+     self.titleArray=[LZClassModel loadModelWithPlistPath:@"class.plist"];
     [self installWebUI];
     
 }

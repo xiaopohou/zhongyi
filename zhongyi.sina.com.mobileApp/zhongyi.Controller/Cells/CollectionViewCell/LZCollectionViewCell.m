@@ -27,6 +27,13 @@
 {
     _url=url;
 }
+-(instancetype)initWithFrame:(CGRect)frame{
+    
+    if (self = [super initWithFrame:frame]) {
+        
+    }
+    return self;
+}
 -(void) setTitle:(NSString *)title
 {
     _title=title;
@@ -41,6 +48,6 @@
     self.CollectionViewContentTableView.title=_title;
     self.CollectionViewContentTableView.url=_url;
     self.CollectionViewContentTableView.tableView.frame=self.bounds;
-    [self.contentView addSubview:self.CollectionViewContentTableView];
+    [self.contentView addSubview:self.CollectionViewContentTableView.tableView];
 }
 @end
