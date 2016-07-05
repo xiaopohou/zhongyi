@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D009DB31D2B965D00993564 /* LZFocusScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D009DB21D2B965D00993564 /* LZFocusScrollView.m */; };
+		1D009DB41D2B9BD800993564 /* LZCollectionViewContentTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF4217C1D2A0EA900D2FA04 /* LZCollectionViewContentTableView.m */; };
 		1D464E211D24C55F000032B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D464E201D24C55F000032B3 /* Assets.xcassets */; };
 		1D464E281D24D3E1000032B3 /* LZClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D464E271D24D3E1000032B3 /* LZClassViewController.m */; };
 		1D464E2C1D24D4A3000032B3 /* LZBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D464E2B1D24D4A3000032B3 /* LZBaseViewController.m */; };
@@ -27,13 +29,14 @@
 		1DEE8BC61D2284FF00DB6AA5 /* LZAboutMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DEE8BC51D2284FF00DB6AA5 /* LZAboutMeViewController.m */; };
 		1DEE8BCC1D22851D00DB6AA5 /* LZSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DEE8BCB1D22851D00DB6AA5 /* LZSettingViewController.m */; };
 		1DEE8BD61D22858000DB6AA5 /* LZDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DEE8BD51D22858000DB6AA5 /* LZDetailViewController.m */; };
-		1DF4217D1D2A0EA900D2FA04 /* LZCollectionViewContentTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF4217C1D2A0EA900D2FA04 /* LZCollectionViewContentTableView.m */; };
 		1DF421801D2A72A600D2FA04 /* LZTTestBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF4217F1D2A72A600D2FA04 /* LZTTestBaseViewController.m */; };
 		F79AE99E43EA13AA6A04F2D7 /* libPods-zhongyi.sina.com.mobileApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 86BF91E674A42A6F764A49E3 /* libPods-zhongyi.sina.com.mobileApp.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0BC88FF0BB3D547823D0F4D1 /* Pods-zhongyi.sina.com.mobileApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zhongyi.sina.com.mobileApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-zhongyi.sina.com.mobileApp/Pods-zhongyi.sina.com.mobileApp.debug.xcconfig"; sourceTree = "<group>"; };
+		1D009DB11D2B965D00993564 /* LZFocusScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZFocusScrollView.h; sourceTree = "<group>"; };
+		1D009DB21D2B965D00993564 /* LZFocusScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZFocusScrollView.m; sourceTree = "<group>"; };
 		1D464E201D24C55F000032B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D464E261D24D3E1000032B3 /* LZClassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZClassViewController.h; sourceTree = "<group>"; };
 		1D464E271D24D3E1000032B3 /* LZClassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZClassViewController.m; sourceTree = "<group>"; };
@@ -115,6 +118,8 @@
 				1D464E2F1D24D689000032B3 /* LZTitleScrollView.m */,
 				1DED30431D2654E300DE57E2 /* LZContentCollectionView.h */,
 				1DED30441D2654E300DE57E2 /* LZContentCollectionView.m */,
+				1D009DB11D2B965D00993564 /* LZFocusScrollView.h */,
+				1D009DB21D2B965D00993564 /* LZFocusScrollView.m */,
 			);
 			path = Parts;
 			sourceTree = "<group>";
@@ -590,6 +595,7 @@
 				1DF421801D2A72A600D2FA04 /* LZTTestBaseViewController.m in Sources */,
 				1DEE8BB31D226EE000DB6AA5 /* AppDelegate.m in Sources */,
 				1DED301A1D25FC8B00DE57E2 /* LZHttpHelper.m in Sources */,
+				1D009DB41D2B9BD800993564 /* LZCollectionViewContentTableView.m in Sources */,
 				1DEE8BC01D2283CF00DB6AA5 /* LZNavigationViewController.m in Sources */,
 				1DEE8BC61D2284FF00DB6AA5 /* LZAboutMeViewController.m in Sources */,
 				1DEE8BBD1D227FF600DB6AA5 /* LZMainTabBarViewController.m in Sources */,
@@ -598,9 +604,9 @@
 				1D464E2C1D24D4A3000032B3 /* LZBaseViewController.m in Sources */,
 				1D464E341D24DC79000032B3 /* LZClassModel.m in Sources */,
 				1D464E281D24D3E1000032B3 /* LZClassViewController.m in Sources */,
-				1DF4217D1D2A0EA900D2FA04 /* LZCollectionViewContentTableView.m in Sources */,
 				1DED30451D2654E300DE57E2 /* LZContentCollectionView.m in Sources */,
 				1DEE8BD61D22858000DB6AA5 /* LZDetailViewController.m in Sources */,
+				1D009DB31D2B965D00993564 /* LZFocusScrollView.m in Sources */,
 				1DEE8BAE1D226B9200DB6AA5 /* main.m in Sources */,
 				1DEE8BB61D227C7600DB6AA5 /* LZHomeViewController.m in Sources */,
 				1DED30491D2656F900DE57E2 /* LZCollectionViewCell.m in Sources */,

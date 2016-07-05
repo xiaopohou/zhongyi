@@ -7,7 +7,8 @@
 //
 
 #import "LZCollectionViewContentTableView.h"
-
+#define ScreenWidth [UIScreen mainScreen].bounds.size.width
+#define ScreenWidth [UIScreen mainScreen].bounds.size.height
 @interface LZCollectionViewContentTableView ()
 
 @end
@@ -23,10 +24,68 @@
     [super didReceiveMemoryWarning];
    
 }
+-(LZFocusScrollView *) focusView
+{
+    if (_focusView==nil) {
+        CGFloat w=[UIScreen mainScreen].bounds.size.width;
+         CGRect frame=CGRectMake(0, 101, [UIScreen mainScreen].bounds.size.width, 200);
+        _focusView=[[LZFocusScrollView alloc]initWithFrame:frame];
+        //_focusView.backgroundColor=[UIColor blackColor];
+        _focusView.delegate=self;
+        _focusView.contentOffset=CGPointMake(0,[UIScreen mainScreen].bounds.size.width);
+        _focusView.contentSize=CGSizeMake(w*4, 200);
+        _focusView.showsHorizontalScrollIndicator=NO;
+        _focusView.showsVerticalScrollIndicator=NO;
+        _focusView.userInteractionEnabled=YES;
+        //_focusView.bounds=NO;
+        _focusView.pagingEnabled=YES;
+    }
+    return _focusView;
+}
+
+-(UIPageControl *)pageControl
+{
+    if (_pageControl==nil) {
+        CGFloat y=CGRectGetMaxY(self.focusView.frame)-10;
+        CGRect pageFrame=CGRectMake(0, y, ScreenWidth, y);
+        _pageControl=[[UIPageControl alloc]initWithFrame:pageFrame];
+        _pageControl.numberOfPages=4;
+        _pageControl.currentPage=0;
+        [_pageControl addTarget:self action:@selector(pageDotClick:) forControlEvents:UIControlEventValueChanged];
+    }
+    return _pageControl;
+}
+- (void)scrollViewDidScroll:(UIScrollView *)sender {
+    NSLog(@"1111111");
+}
+-(void)pageDotClick:(id)sender
+{
+    int index=[sender currentPage];
+    
+    NSLog(@"%d",index);
+}
+
 -(void) LoadItemTableData
 {
-    if ([self.title isEqualToString:@"热点"]) {
-        NSLog(@"热门");
+    if ([self.title isEqualToString:@"热点"])
+    {
+        
+        NSArray *picts=[NSArray arrayWithObjects:@"meinv1.png",@"meinv2.png",@"meinv3.png",@"meinv4.png", nil];
+        for (int i =0 ; i < picts.count; i++) {
+            UIImageView *imgItem=[[UIImageView alloc]initWithFrame:CGRectMake(i*200, 101, ScreenWidth, 320)];
+            [imgItem setImage:[UIImage imageNamed:picts[i]]];
+            [self.focusView addSubview:imgItem];
+        }
+        
+//        UIImageView *imgB=[[UIImageView alloc]init];
+//        imgB.frame=CGRectMake(0, 101, ScreenWidth, 320);
+//        [imgB setImage:[UIImage imageNamed:@"meinv3.png"]];
+        
+        
+        //画幻灯片
+        //[self.focusView addSubview:self.pageControl];
+        self.tableView.tableHeaderView=self.focusView;
+     
         self.view.backgroundColor=[UIColor whiteColor];
     }
     else if([self.title isEqualToString:@"图库"])

@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "LZFocusScrollView.h"
 @interface LZCollectionViewContentTableView : UITableViewController
 @property(nonatomic,strong) NSString *title;
 @property(nonatomic,strong) NSString *url;
+@property(nonatomic,strong) LZFocusScrollView *focusView;
+@property(nonatomic,strong) UIPageControl *pageControl;
 @end
