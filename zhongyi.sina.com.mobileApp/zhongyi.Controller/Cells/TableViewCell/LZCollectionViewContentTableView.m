@@ -80,7 +80,7 @@
     if ([self.title isEqualToString:@"热点"])
     {
         //请求api
-        NSString *focusApiUrl=@"http://58.83.218.135:9999/api/iossource/getfocusnews/34/";
+        NSString *focusApiUrl=@"http://58.83.218.135:9999/api/iossource/getfocusnews/34/4";
         [LZClassModel initDictWithRemoteUrl:focusApiUrl success:^(NSArray *result) {
             NSLog(@"远程请求数量%lu",(unsigned long)result.count);//3个
 
@@ -92,17 +92,7 @@
                 [self.focusView addSubview:imgItem];
             }
         }];
-//        
-//        NSArray *picts=[NSArray arrayWithObjects:@"meinv1.png",@"meinv2.png",@"meinv3.png",@"meinv4.png", nil];
-//        for (int i =0 ; i < picts.count; i++) {
-//            
-//            CGRect imageFrame=CGRectMake(i*ScreenWidth, 0, self.focusView.bounds.size.width, 320);
-//            UIImageView *imgItem=[[UIImageView alloc]initWithFrame:imageFrame];
-//            //NSLog(@"-ScreenWidth---%f",ScreenWidth);
-//            [imgItem setImage:[UIImage imageNamed:picts[i]]];
-//            [self.focusView addSubview:imgItem];
-//            [self.focusView addSubview:self.pageControl];
-//        }
+
 
         self.focusView.backgroundColor=[UIColor greenColor];
          //画幻灯片
