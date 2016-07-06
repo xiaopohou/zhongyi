@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "LZFocusScrollView.h"
+#import "LZClassModel.h"
 @interface LZCollectionViewContentTableView : UITableViewController
 @property(nonatomic,strong) NSString *title;
 @property(nonatomic,strong) NSString *url;

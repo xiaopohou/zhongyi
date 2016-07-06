@@ -11,6 +11,9 @@
 #import "LZContentCollectionView.h"
 #import "LZCollectionViewCell.h"
 #import "LZClassModel.h"
+ 
+
+
 @interface LZBaseViewController : UIViewController
 @property (nonatomic,strong) NSArray *titleArray;
 @property (nonatomic,strong) LZTitleScrollView *titleScrollView;
@@ -19,5 +22,4 @@
 
 @property (nonatomic,assign) NSInteger lastIndex;
 -(void) installWebUI;
-
 @end

@@ -23,7 +23,10 @@ PODS:
   - Mantle (2.0.7):
     - Mantle/extobjc (= 2.0.7)
   - Mantle/extobjc (2.0.7)
-  - MJRefresh (3.1.9)
+  - MJRefresh (3.1.10)
+  - SDWebImage (3.8.1):
+    - SDWebImage/Core (= 3.8.1)
+  - SDWebImage/Core (3.8.1)
   - YYKit (1.0.7):
     - YYKit/no-arc (= 1.0.7)
   - YYKit/no-arc (1.0.7)
@@ -34,6 +37,7 @@ DEPENDENCIES:
   - GRMustache (~> 7.3.2)
   - Mantle (~> 2.0.2)
   - MJRefresh (~> 3.1.0)
+  - SDWebImage (~> 3.8.1)
   - YYKit (~> 1.0.7)
 
 SPEC CHECKSUMS:
@@ -42,9 +46,10 @@ SPEC CHECKSUMS:
   GRMustache: ebe6104fd30a6d22c1f36af131e19e2dbf7cd292
   JRSwizzle: dd5ead5d913a0f29e7f558200165849f006bb1e3
   Mantle: bc40bb061d8c2c6fb48d5083e04d928c3b7f73d9
-  MJRefresh: c5f1f1653e5a1b932c90f78074f2bc86f3f9bd5e
+  MJRefresh: bb72948c985914b0b5cecac573a2c69a8915fb02
+  SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
   YYKit: 843d1b26e20b82c695790c9a89907eaa1e99907f
 
-PODFILE CHECKSUM: 1a5d27bf3fdcd5746baf09be1f4bb04e7ffdb7f3
+PODFILE CHECKSUM: fb003b60cb2873c7b62466c47e2a169940e06a8c
 
 COCOAPODS: 1.0.1

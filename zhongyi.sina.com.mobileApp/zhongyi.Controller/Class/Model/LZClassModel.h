@@ -14,6 +14,7 @@ typedef void(^successQueryClassBlock)(NSArray *result);
 @property (nonatomic,strong) NSString *cid;
 @property (nonatomic,strong) NSString * title;
 @property (nonatomic,strong) NSString *url;
+@property (nonatomic,strong) NSString *imgUrl;
 
 +(void) loadModelList:(NSString *) str success:(successBlock) callback;
 

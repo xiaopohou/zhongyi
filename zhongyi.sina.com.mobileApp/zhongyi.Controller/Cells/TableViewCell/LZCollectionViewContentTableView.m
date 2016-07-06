@@ -7,8 +7,10 @@
 //
 
 #import "LZCollectionViewContentTableView.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 #define ScreenWidth [UIScreen mainScreen].bounds.size.width
 #define ScreenHeight [UIScreen mainScreen].bounds.size.height
+
 @interface LZCollectionViewContentTableView ()
 
 @end
@@ -37,12 +39,11 @@
         
         //NSLog(@"--->%f",self.focusView.bounds.size.width);
         
-        _focusView.contentSize=CGSizeMake(w*4, self.focusView.bounds.size.height);
-        
+        _focusView.contentSize=CGSizeMake(w*4, self.focusView.frame.size.height);
+        _focusView.bounces=NO;
         _focusView.showsHorizontalScrollIndicator=NO;
         _focusView.showsVerticalScrollIndicator=NO;
         _focusView.userInteractionEnabled=YES;
-     
         _focusView.pagingEnabled=YES;
     }
     return _focusView;
@@ -51,17 +52,21 @@
 -(UIPageControl *)pageControl
 {
     if (_pageControl==nil) {
-        CGFloat y=CGRectGetMaxY(self.focusView.frame)-10;
-        CGRect pageFrame=CGRectMake(0, y, ScreenWidth, y);
+
+        CGRect pageFrame=CGRectMake(0, 300, ScreenWidth, 30);
         _pageControl=[[UIPageControl alloc]initWithFrame:pageFrame];
         _pageControl.numberOfPages=4;
         _pageControl.currentPage=0;
+        _pageControl.backgroundColor=[UIColor darkGrayColor];
         [_pageControl addTarget:self action:@selector(pageDotClick:) forControlEvents:UIControlEventValueChanged];
     }
     return _pageControl;
 }
-- (void)scrollViewDidScroll:(UIScrollView *)sender {
-    NSLog(@"1111111");
+
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    //NSLog(@"滚动stop");
 }
 -(void)pageDotClick:(id)sender
 {
@@ -74,34 +79,36 @@
 {
     if ([self.title isEqualToString:@"热点"])
     {
- 
-        NSLog(@"加载热点");
-        NSArray *picts=[NSArray arrayWithObjects:@"meinv1.png",@"meinv2.png",@"meinv3.png",@"meinv4.png", nil];
-        for (int i =0 ; i < picts.count; i++) {
-          
-            CGRect imageFrame=CGRectMake(i*ScreenWidth, 0, self.focusView.bounds.size.width, 320);
-            UIImageView *imgItem=[[UIImageView alloc]initWithFrame:imageFrame];
-            //NSLog(@"-ScreenWidth---%f",ScreenWidth);
-            [imgItem setImage:[UIImage imageNamed:picts[i]]];
-            [self.focusView addSubview:imgItem];
-        }
-        
-        
-        
-//        UIImageView *imgB=[[UIImageView alloc]init];
-//        imgB.frame=CGRectMake(0, 101, ScreenWidth, 320);
-//        [imgB setImage:[UIImage imageNamed:@"meinv3.png"]];
-        
-        
-        
-        
-        
+        //请求api
+        NSString *focusApiUrl=@"http://58.83.218.135:9999/api/iossource/getfocusnews/34/";
+        [LZClassModel initDictWithRemoteUrl:focusApiUrl success:^(NSArray *result) {
+            NSLog(@"远程请求数量%lu",(unsigned long)result.count);//3个
+
+            for (int i = 0 ; i<result.count;i++) {
+                LZClassModel *model=[result objectAtIndex:i];
+                CGRect imageFrame=CGRectMake(i*ScreenWidth, 0, self.focusView.bounds.size.width, 320);
+                UIImageView *imgItem=[[UIImageView alloc]initWithFrame:imageFrame];
+                [imgItem sd_setImageWithURL:[NSURL URLWithString:model.imgUrl] placeholderImage:nil];
+                [self.focusView addSubview:imgItem];
+            }
+        }];
+//        
+//        NSArray *picts=[NSArray arrayWithObjects:@"meinv1.png",@"meinv2.png",@"meinv3.png",@"meinv4.png", nil];
+//        for (int i =0 ; i < picts.count; i++) {
+//            
+//            CGRect imageFrame=CGRectMake(i*ScreenWidth, 0, self.focusView.bounds.size.width, 320);
+//            UIImageView *imgItem=[[UIImageView alloc]initWithFrame:imageFrame];
+//            //NSLog(@"-ScreenWidth---%f",ScreenWidth);
+//            [imgItem setImage:[UIImage imageNamed:picts[i]]];
+//            [self.focusView addSubview:imgItem];
+//            [self.focusView addSubview:self.pageControl];
+//        }
+
         self.focusView.backgroundColor=[UIColor greenColor];
          //画幻灯片
         //[self.focusView addSubview:self.pageControl];
         self.tableView.tableHeaderView=self.focusView;
-   
-        self.view.backgroundColor=[UIColor whiteColor];
+
     }
     else if([self.title isEqualToString:@"图库"])
     {
