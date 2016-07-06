@@ -10,12 +10,16 @@
 #import "LZHttpHelper.h"
 @implementation LZClassModel
 
+
 -(instancetype) initModelWithDict:(NSDictionary *) dict
 {
-    if (self=[super init]) {
-        [self setValuesForKeysWithDictionary:dict];
-    }
-    return self;
+    
+        LZClassModel *model=[[LZClassModel alloc]init];
+        model.cid=dict[@"id"];
+        model.title=dict[@"title"];
+        model.url=dict[@"url"];
+       
+        return  model;
 }
 
 +(instancetype) initTitleModelWithDict:(NSDictionary *)dict

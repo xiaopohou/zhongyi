@@ -10,7 +10,7 @@
 
 
 @interface LZCollectionViewCell : UICollectionViewCell
-@property (nonatomic,strong) NSString *id;
+@property (nonatomic,strong) NSString *cid;
 @property (nonatomic,strong) NSString *title;
 @property (nonatomic,strong) NSString *url;
 @end

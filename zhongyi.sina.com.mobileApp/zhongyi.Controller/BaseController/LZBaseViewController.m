@@ -54,20 +54,10 @@
 {
     if (_contentScrollView==nil)
     {
+        CGFloat collectViewHeight=ScreenH-CGRectGetMaxY(self.titleScrollView.bounds)-49;
+        CGFloat collectViewY=CGRectGetMaxY(self.titleScrollView.frame);
 
-        //可操作区域=总高-头、底部控件高度
-        
-        //此句话不能解除注释，否则下面的collectionview就会出现位置错误，导致滚动菜单看不见了
- 
-//        CGFloat collectViewHeight=ScreenH-CGRectGetMaxY(self.titleScrollView.frame)-49;
-//        CGFloat collectViewWeight=CGRectGetMaxY(self.titleScrollView.frame);
-        
-//        NSLog(@"--A--->%f",collectViewHeight);   //110
-//        
-//        NSLog(@"--B--->%f",collectViewWeight);   //586
-        
-        
-        _contentScrollView=[[LZContentCollectionView alloc]initWithFrame:CGRectMake(0, 111, ScreenW,586) collectionViewLayout:self.layoutView];
+        _contentScrollView=[[LZContentCollectionView alloc]initWithFrame:CGRectMake(0, collectViewY, ScreenW,collectViewHeight) collectionViewLayout:self.layoutView];
 
        _contentScrollView.delegate=self;
         _contentScrollView.dataSource=self;
@@ -113,6 +103,7 @@
     LZClassModel *classModel=self.titleArray[indexPath.row];
     cellItem.url=classModel.url;
     cellItem.title=classModel.title;
+    cellItem.cid=classModel.cid;
     return cellItem;
 }
 #pragma collectionview 左右滚动事件

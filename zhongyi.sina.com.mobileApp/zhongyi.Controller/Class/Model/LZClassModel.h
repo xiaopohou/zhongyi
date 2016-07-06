@@ -11,7 +11,7 @@
 typedef void(^successBlock)(NSArray * result);
 typedef void(^successQueryClassBlock)(NSArray *result);
 @interface LZClassModel : NSObject
-@property (nonatomic,strong) NSString *id;
+@property (nonatomic,strong) NSString *cid;
 @property (nonatomic,strong) NSString * title;
 @property (nonatomic,strong) NSString *url;
 

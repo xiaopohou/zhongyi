@@ -3,18 +3,24 @@
 <plist version="1.0">
 <array>
 	<dict>
+		<key>cid</key>
+		<string>1</string>
 		<key>title</key>
 		<string>热点</string>
 		<key>url</key>
 		<string></string>
 	</dict>
 	<dict>
+		<key>cid</key>
+		<string>2</string>
 		<key>title</key>
 		<string>图库</string>
 		<key>url</key>
 		<string></string>
 	</dict>
 	<dict>
+		<key>cid</key>
+		<string>3</string>
 		<key>title</key>
 		<string>图文</string>
 		<key>url</key>

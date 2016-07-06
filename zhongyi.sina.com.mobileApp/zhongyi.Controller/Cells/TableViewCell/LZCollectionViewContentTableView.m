@@ -8,7 +8,7 @@
 
 #import "LZCollectionViewContentTableView.h"
 #define ScreenWidth [UIScreen mainScreen].bounds.size.width
-#define ScreenWidth [UIScreen mainScreen].bounds.size.height
+#define ScreenHeight [UIScreen mainScreen].bounds.size.height
 @interface LZCollectionViewContentTableView ()
 
 @end
@@ -18,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self LoadItemTableData];
+    self.automaticallyAdjustsScrollViewInsets=NO;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -28,16 +29,20 @@
 {
     if (_focusView==nil) {
         CGFloat w=[UIScreen mainScreen].bounds.size.width;
-         CGRect frame=CGRectMake(0, 101, [UIScreen mainScreen].bounds.size.width, 200);
+         CGRect frame=CGRectMake(0, 101, ScreenWidth, 320);
         _focusView=[[LZFocusScrollView alloc]initWithFrame:frame];
         //_focusView.backgroundColor=[UIColor blackColor];
         _focusView.delegate=self;
-        _focusView.contentOffset=CGPointMake(0,[UIScreen mainScreen].bounds.size.width);
-        _focusView.contentSize=CGSizeMake(w*4, 200);
+        _focusView.contentOffset=CGPointMake(0,ScreenWidth);
+        
+        //NSLog(@"--->%f",self.focusView.bounds.size.width);
+        
+        _focusView.contentSize=CGSizeMake(w*4, self.focusView.bounds.size.height);
+        
         _focusView.showsHorizontalScrollIndicator=NO;
         _focusView.showsVerticalScrollIndicator=NO;
         _focusView.userInteractionEnabled=YES;
-        //_focusView.bounds=NO;
+     
         _focusView.pagingEnabled=YES;
     }
     return _focusView;
@@ -69,27 +74,38 @@
 {
     if ([self.title isEqualToString:@"热点"])
     {
-        
+ 
+        NSLog(@"加载热点");
         NSArray *picts=[NSArray arrayWithObjects:@"meinv1.png",@"meinv2.png",@"meinv3.png",@"meinv4.png", nil];
         for (int i =0 ; i < picts.count; i++) {
-            UIImageView *imgItem=[[UIImageView alloc]initWithFrame:CGRectMake(i*200, 101, ScreenWidth, 320)];
+          
+            CGRect imageFrame=CGRectMake(i*ScreenWidth, 0, self.focusView.bounds.size.width, 320);
+            UIImageView *imgItem=[[UIImageView alloc]initWithFrame:imageFrame];
+            //NSLog(@"-ScreenWidth---%f",ScreenWidth);
             [imgItem setImage:[UIImage imageNamed:picts[i]]];
             [self.focusView addSubview:imgItem];
         }
+        
+        
         
 //        UIImageView *imgB=[[UIImageView alloc]init];
 //        imgB.frame=CGRectMake(0, 101, ScreenWidth, 320);
 //        [imgB setImage:[UIImage imageNamed:@"meinv3.png"]];
         
         
-        //画幻灯片
+        
+        
+        
+        self.focusView.backgroundColor=[UIColor greenColor];
+         //画幻灯片
         //[self.focusView addSubview:self.pageControl];
         self.tableView.tableHeaderView=self.focusView;
-     
+   
         self.view.backgroundColor=[UIColor whiteColor];
     }
     else if([self.title isEqualToString:@"图库"])
     {
+       
         self.view.backgroundColor=[UIColor yellowColor];
     }else
     {

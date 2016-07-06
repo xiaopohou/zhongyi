@@ -47,6 +47,7 @@
     }
     self.CollectionViewContentTableView.title=_title;
     self.CollectionViewContentTableView.url=_url;
+    self.CollectionViewContentTableView.cid=_cid;
     self.CollectionViewContentTableView.tableView.frame=self.bounds;
     [self.contentView addSubview:self.CollectionViewContentTableView.tableView];
 }
