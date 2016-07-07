@@ -13,7 +13,6 @@
 		1D464E281D24D3E1000032B3 /* LZClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D464E271D24D3E1000032B3 /* LZClassViewController.m */; };
 		1D464E2C1D24D4A3000032B3 /* LZBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D464E2B1D24D4A3000032B3 /* LZBaseViewController.m */; };
 		1D464E301D24D689000032B3 /* LZTitleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D464E2F1D24D689000032B3 /* LZTitleScrollView.m */; };
-		1D464E341D24DC79000032B3 /* LZClassModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D464E331D24DC79000032B3 /* LZClassModel.m */; };
 		1D464E361D24F865000032B3 /* class.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1D464E351D24F865000032B3 /* class.plist */; };
 		1D4FC5171D235BA200361C57 /* LZNewsInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4FC5161D235BA200361C57 /* LZNewsInfo.m */; };
 		1DED301A1D25FC8B00DE57E2 /* LZHttpHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DED30191D25FC8B00DE57E2 /* LZHttpHelper.m */; };
@@ -28,8 +27,12 @@
 		1DEE8BC01D2283CF00DB6AA5 /* LZNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DEE8BBF1D2283CF00DB6AA5 /* LZNavigationViewController.m */; };
 		1DEE8BC61D2284FF00DB6AA5 /* LZAboutMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DEE8BC51D2284FF00DB6AA5 /* LZAboutMeViewController.m */; };
 		1DEE8BCC1D22851D00DB6AA5 /* LZSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DEE8BCB1D22851D00DB6AA5 /* LZSettingViewController.m */; };
-		1DEE8BD61D22858000DB6AA5 /* LZDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DEE8BD51D22858000DB6AA5 /* LZDetailViewController.m */; };
 		1DF421801D2A72A600D2FA04 /* LZTTestBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF4217F1D2A72A600D2FA04 /* LZTTestBaseViewController.m */; };
+		1DFAD71A1D2E289600F83940 /* LZDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DFAD7191D2E289600F83940 /* LZDetailViewController.m */; };
+		1DFAD71D1D2E2BC900F83940 /* LZBaseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DFAD71C1D2E2BC900F83940 /* LZBaseDetailViewController.m */; };
+		1DFAD7241D2E300800F83940 /* LZClassModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DFAD7231D2E300800F83940 /* LZClassModel.m */; };
+		1DFAD7271D2E313D00F83940 /* LZNews.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DFAD7261D2E313D00F83940 /* LZNews.m */; };
+		1DFAD7321D2E57CE00F83940 /* LZConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DFAD7311D2E57CE00F83940 /* LZConstants.m */; };
 		F79AE99E43EA13AA6A04F2D7 /* libPods-zhongyi.sina.com.mobileApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 86BF91E674A42A6F764A49E3 /* libPods-zhongyi.sina.com.mobileApp.a */; };
 /* End PBXBuildFile section */
 
@@ -44,8 +47,6 @@
 		1D464E2B1D24D4A3000032B3 /* LZBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBaseViewController.m; sourceTree = "<group>"; };
 		1D464E2E1D24D689000032B3 /* LZTitleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZTitleScrollView.h; sourceTree = "<group>"; };
 		1D464E2F1D24D689000032B3 /* LZTitleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZTitleScrollView.m; sourceTree = "<group>"; };
-		1D464E321D24DC79000032B3 /* LZClassModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZClassModel.h; sourceTree = "<group>"; };
-		1D464E331D24DC79000032B3 /* LZClassModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZClassModel.m; sourceTree = "<group>"; };
 		1D464E351D24F865000032B3 /* class.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = class.plist; sourceTree = "<group>"; };
 		1D4FC5151D235BA200361C57 /* LZNewsInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZNewsInfo.h; sourceTree = "<group>"; };
 		1D4FC5161D235BA200361C57 /* LZNewsInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZNewsInfo.m; sourceTree = "<group>"; };
@@ -71,12 +72,21 @@
 		1DEE8BC51D2284FF00DB6AA5 /* LZAboutMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZAboutMeViewController.m; sourceTree = "<group>"; };
 		1DEE8BCA1D22851D00DB6AA5 /* LZSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZSettingViewController.h; sourceTree = "<group>"; };
 		1DEE8BCB1D22851D00DB6AA5 /* LZSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZSettingViewController.m; sourceTree = "<group>"; };
-		1DEE8BD41D22858000DB6AA5 /* LZDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZDetailViewController.h; sourceTree = "<group>"; };
-		1DEE8BD51D22858000DB6AA5 /* LZDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZDetailViewController.m; sourceTree = "<group>"; };
 		1DF4217B1D2A0EA900D2FA04 /* LZCollectionViewContentTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZCollectionViewContentTableView.h; sourceTree = "<group>"; };
 		1DF4217C1D2A0EA900D2FA04 /* LZCollectionViewContentTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZCollectionViewContentTableView.m; sourceTree = "<group>"; };
 		1DF4217E1D2A72A600D2FA04 /* LZTTestBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZTTestBaseViewController.h; sourceTree = "<group>"; };
 		1DF4217F1D2A72A600D2FA04 /* LZTTestBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZTTestBaseViewController.m; sourceTree = "<group>"; };
+		1DFAD7181D2E289600F83940 /* LZDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZDetailViewController.h; sourceTree = "<group>"; };
+		1DFAD7191D2E289600F83940 /* LZDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZDetailViewController.m; sourceTree = "<group>"; };
+		1DFAD71B1D2E2BC900F83940 /* LZBaseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBaseDetailViewController.h; sourceTree = "<group>"; };
+		1DFAD71C1D2E2BC900F83940 /* LZBaseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBaseDetailViewController.m; sourceTree = "<group>"; };
+		1DFAD7221D2E300800F83940 /* LZClassModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZClassModel.h; sourceTree = "<group>"; };
+		1DFAD7231D2E300800F83940 /* LZClassModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZClassModel.m; sourceTree = "<group>"; };
+		1DFAD7251D2E313D00F83940 /* LZNews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZNews.h; sourceTree = "<group>"; };
+		1DFAD7261D2E313D00F83940 /* LZNews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZNews.m; sourceTree = "<group>"; };
+		1DFAD7281D2E546600F83940 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		1DFAD7301D2E57CE00F83940 /* LZConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZConstants.h; sourceTree = "<group>"; };
+		1DFAD7311D2E57CE00F83940 /* LZConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZConstants.m; sourceTree = "<group>"; };
 		86BF91E674A42A6F764A49E3 /* libPods-zhongyi.sina.com.mobileApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-zhongyi.sina.com.mobileApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4BF94A2A7D81442B984C225 /* Pods-zhongyi.sina.com.mobileApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zhongyi.sina.com.mobileApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-zhongyi.sina.com.mobileApp/Pods-zhongyi.sina.com.mobileApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +117,8 @@
 			children = (
 				1D464E2A1D24D4A3000032B3 /* LZBaseViewController.h */,
 				1D464E2B1D24D4A3000032B3 /* LZBaseViewController.m */,
+				1DFAD71B1D2E2BC900F83940 /* LZBaseDetailViewController.h */,
+				1DFAD71C1D2E2BC900F83940 /* LZBaseDetailViewController.m */,
 			);
 			path = BaseController;
 			sourceTree = "<group>";
@@ -158,10 +170,10 @@
 		1D6527DA1D22645100E89D69 /* zhongyi.Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1DFAD71F1D2E2F7E00F83940 /* Model */,
 				1D464E2D1D24D5E6000032B3 /* Parts */,
 				1D464E291D24D497000032B3 /* BaseController */,
 				1D464E251D24CB63000032B3 /* Cells */,
-				1DEE8BD01D22856E00DB6AA5 /* Detail */,
 				1DEE8B8C1D226A0E00DB6AA5 /* AboutMe */,
 				1DEE8B901D226A0E00DB6AA5 /* Class */,
 				1DEE8B941D226A0E00DB6AA5 /* Home */,
@@ -197,6 +209,8 @@
 		1DED30171D25FC6200DE57E2 /* StringHelper */ = {
 			isa = PBXGroup;
 			children = (
+				1DFAD7301D2E57CE00F83940 /* LZConstants.h */,
+				1DFAD7311D2E57CE00F83940 /* LZConstants.m */,
 			);
 			path = StringHelper;
 			sourceTree = "<group>";
@@ -257,7 +271,6 @@
 			isa = PBXGroup;
 			children = (
 				1DEE8B911D226A0E00DB6AA5 /* Controller */,
-				1DEE8B921D226A0E00DB6AA5 /* Model */,
 				1DEE8B931D226A0E00DB6AA5 /* View */,
 			);
 			name = Class;
@@ -271,15 +284,6 @@
 				1D464E271D24D3E1000032B3 /* LZClassViewController.m */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		1DEE8B921D226A0E00DB6AA5 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				1D464E321D24DC79000032B3 /* LZClassModel.h */,
-				1D464E331D24DC79000032B3 /* LZClassModel.m */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		1DEE8B931D226A0E00DB6AA5 /* View */ = {
@@ -327,6 +331,7 @@
 		1DEE8B971D226A0E00DB6AA5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1DEE8BD01D22856E00DB6AA5 /* Detail */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -388,6 +393,7 @@
 				1DEE8BAF1D226E0400DB6AA5 /* Info.plist */,
 				1DEE8BAC1D226B9200DB6AA5 /* main.m */,
 				1D464E351D24F865000032B3 /* class.plist */,
+				1DFAD7281D2E546600F83940 /* PrefixHeader.pch */,
 			);
 			path = zhongyi.Config;
 			sourceTree = "<group>";
@@ -424,7 +430,6 @@
 			children = (
 				1DEE8BD11D22856E00DB6AA5 /* Controller */,
 				1DEE8BD21D22856E00DB6AA5 /* Model */,
-				1DEE8BD31D22856E00DB6AA5 /* View */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -432,8 +437,8 @@
 		1DEE8BD11D22856E00DB6AA5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				1DEE8BD41D22858000DB6AA5 /* LZDetailViewController.h */,
-				1DEE8BD51D22858000DB6AA5 /* LZDetailViewController.m */,
+				1DFAD7181D2E289600F83940 /* LZDetailViewController.h */,
+				1DFAD7191D2E289600F83940 /* LZDetailViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -442,14 +447,27 @@
 			isa = PBXGroup;
 			children = (
 			);
+			name = Model;
+			path = ../Home/View/Detail/Model;
+			sourceTree = "<group>";
+		};
+		1DFAD71F1D2E2F7E00F83940 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1DFAD7201D2E2F7E00F83940 /* Class */,
+			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		1DEE8BD31D22856E00DB6AA5 /* View */ = {
+		1DFAD7201D2E2F7E00F83940 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				1DFAD7221D2E300800F83940 /* LZClassModel.h */,
+				1DFAD7231D2E300800F83940 /* LZClassModel.m */,
+				1DFAD7251D2E313D00F83940 /* LZNews.h */,
+				1DFAD7261D2E313D00F83940 /* LZNews.m */,
 			);
-			path = View;
+			path = Class;
 			sourceTree = "<group>";
 		};
 		3CC6EFCBFF041B519EA6F862 /* Frameworks */ = {
@@ -601,16 +619,19 @@
 				1DEE8BBD1D227FF600DB6AA5 /* LZMainTabBarViewController.m in Sources */,
 				1D464E301D24D689000032B3 /* LZTitleScrollView.m in Sources */,
 				1D4FC5171D235BA200361C57 /* LZNewsInfo.m in Sources */,
+				1DFAD71A1D2E289600F83940 /* LZDetailViewController.m in Sources */,
 				1D464E2C1D24D4A3000032B3 /* LZBaseViewController.m in Sources */,
-				1D464E341D24DC79000032B3 /* LZClassModel.m in Sources */,
 				1D464E281D24D3E1000032B3 /* LZClassViewController.m in Sources */,
 				1DED30451D2654E300DE57E2 /* LZContentCollectionView.m in Sources */,
-				1DEE8BD61D22858000DB6AA5 /* LZDetailViewController.m in Sources */,
+				1DFAD71D1D2E2BC900F83940 /* LZBaseDetailViewController.m in Sources */,
 				1D009DB31D2B965D00993564 /* LZFocusScrollView.m in Sources */,
+				1DFAD7271D2E313D00F83940 /* LZNews.m in Sources */,
 				1DEE8BAE1D226B9200DB6AA5 /* main.m in Sources */,
 				1DEE8BB61D227C7600DB6AA5 /* LZHomeViewController.m in Sources */,
 				1DED30491D2656F900DE57E2 /* LZCollectionViewCell.m in Sources */,
+				1DFAD7241D2E300800F83940 /* LZClassModel.m in Sources */,
 				1DEE8BCC1D22851D00DB6AA5 /* LZSettingViewController.m in Sources */,
+				1DFAD7321D2E57CE00F83940 /* LZConstants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -702,6 +723,8 @@
 			baseConfigurationReference = 0BC88FF0BB3D547823D0F4D1 /* Pods-zhongyi.sina.com.mobileApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "${SRCROOT}/zhongyi.sina.com.mobileApp/zhongyi.Config/PrefixHeader.pch";
 				INFOPLIST_FILE = zhongyi.sina.com.mobileApp/zhongyi.Config/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -715,6 +738,8 @@
 			baseConfigurationReference = D4BF94A2A7D81442B984C225 /* Pods-zhongyi.sina.com.mobileApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "${SRCROOT}/zhongyi.sina.com.mobileApp/zhongyi.Config/PrefixHeader.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "zhongyi.Monkey.zhongyi-sina-com-mobileApp";

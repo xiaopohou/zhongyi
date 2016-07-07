@@ -8,6 +8,8 @@
 
 #import "LZCollectionViewContentTableView.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "LZDetailViewController.h"
+#import "LZNews.h"
 #import <MJRefresh.h>
 #define ScreenWidth [UIScreen mainScreen].bounds.size.width
 #define ScreenHeight [UIScreen mainScreen].bounds.size.height
@@ -106,7 +108,7 @@
         //请求api加载幻灯片
         NSString *focusApiUrl=@"http://58.83.218.135:9999/api/iossource/getfocusnews/34/4";
         [LZClassModel initDictWithRemoteUrl:focusApiUrl success:^(NSArray *result) {
-            NSLog(@"远程请求焦点数量%lu",(unsigned long)result.count);//3个
+            //NSLog(@"远程请求焦点数量%lu",(unsigned long)result.count);//3个
 
             for (int i = 0 ; i<result.count;i++) {
                 LZClassModel *model=[result objectAtIndex:i];
@@ -118,10 +120,10 @@
         }];
         
         //请求tableview数据api
-        NSString *tableViewApiUrl= [NSString stringWithFormat:@"%@%@",BaseUrl,@"/api/iossource/querynews/34/1/5"];
-        NSLog(@"url is %@",tableViewApiUrl);//3个
+        NSString *tableViewApiUrl= [NSString stringWithFormat:@"%@%@",BaseUrl,@"/api/iossource/querynews/34/1/15"];
+        //NSLog(@"url is %@",tableViewApiUrl);//3个
         
-        [LZClassModel initDictWithRemoteUrl:tableViewApiUrl success:^(NSArray *result) {
+        [LZNews loadModelListWithRemoteUrl:tableViewApiUrl success:^(NSArray *result) {
             weakself.dataList=result;
         }];
 
@@ -167,7 +169,21 @@
     return cell;
 }
  
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    LZNews *model=[self.dataList objectAtIndex:indexPath.row];
+    if (self.navigationController) {
+//        LZDetailViewController *detailView=[[LZDetailViewController alloc]init];
+//        
+//        [self.navigationController pushViewController:detailView animated:YES];
+//        NSLog(@"点击----%@",model.title);
+    }
+    else
+    {
+        [[NSNotificationCenter defaultCenter]postNotificationName:KNotificationNameForContentView object:nil userInfo:@{KNotificationObjectKeyName:model.infoid}];
+    }
 
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

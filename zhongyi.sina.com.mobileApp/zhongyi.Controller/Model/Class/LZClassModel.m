@@ -50,7 +50,8 @@
 {
     NSDictionary *dictResult=nil;
 
-    [LZHttpHelper getContentWithRetmoteUrl:url success:^(id responseObject) {
+    [LZHttpHelper getContentWithRetmoteUrl:url success:^(id responseObject)
+    {
         
     NSError *error;
 

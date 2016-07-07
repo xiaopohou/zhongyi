@@ -9,13 +9,16 @@
 #import "LZDetailViewController.h"
 
 @interface LZDetailViewController ()
-
+@property (nonatomic,strong) UIWebView *webView;
 @end
 
 @implementation LZDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title=@"正文页";
+    
+    NSLog(@"接收的值是：%@",self.oid);
     // Do any additional setup after loading the view.
 }
 
@@ -23,7 +26,14 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+-(void) shareArticle
+{
+    
+}
+-(void) localCollect
+{
+    
+}
 /*
 #pragma mark - Navigation
 

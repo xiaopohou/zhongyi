@@ -8,6 +8,7 @@
 
 #import "LZHomeViewController.h"
 #import "LZClassModel.h"
+#import "LZDetailViewController.h"
 
 @implementation LZHomeViewController
 
@@ -27,6 +28,8 @@
     //很奇怪的一句话，不加的话导航栏会出现坐标不准的情况
     self.automaticallyAdjustsScrollViewInsets=NO;
     
+    //注册通知
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(RedirectToDetailViewPage:) name:KNotificationNameForContentView object:nil];
     
 #pragma 加载远程无法解决
     //对base类属性赋值
@@ -47,6 +50,14 @@
      self.titleArray=[LZClassModel loadModelWithPlistPath:@"class.plist"];
     [self installWebUI];
     
+}
+
+-(void) RedirectToDetailViewPage:(NSNotification *) notification
+{
+    LZDetailViewController *delailView=[[LZDetailViewController alloc]init];
+    NSString *newsId=notification.userInfo[KNotificationObjectKeyName];
+    delailView.oid=newsId;
+    [self.navigationController pushViewController:delailView animated:NO];
 }
 
 -(void) setNav
