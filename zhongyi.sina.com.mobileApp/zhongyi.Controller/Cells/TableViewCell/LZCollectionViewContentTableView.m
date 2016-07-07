@@ -8,8 +8,11 @@
 
 #import "LZCollectionViewContentTableView.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import <MJRefresh.h>
 #define ScreenWidth [UIScreen mainScreen].bounds.size.width
 #define ScreenHeight [UIScreen mainScreen].bounds.size.height
+#define BaseUrl @"http://58.83.218.135:9999"
+#define tableViewCellId @"reuseIdentifier"
 
 @interface LZCollectionViewContentTableView ()
 
@@ -19,10 +22,30 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+  
+    self.tableView.mj_header=[MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [self LoadItemTableData];
+        [self.tableView.mj_header endRefreshing];
+    }];
+    
+    self.tableView.mj_footer=[MJRefreshAutoFooter footerWithRefreshingBlock:^{
+        [self LoadMoreData];
+        [self.tableView.mj_footer endRefreshing];
+    }];
+    
+    
     [self LoadItemTableData];
     self.automaticallyAdjustsScrollViewInsets=NO;
 }
-
+-(void) RefreshData
+{
+    NSLog(@"上拉刷新");
+}
+-(void) LoadMoreData
+{
+     NSLog(@"下拉刷新");
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
    
@@ -77,22 +100,30 @@
 
 -(void) LoadItemTableData
 {
-    if ([self.title isEqualToString:@"热点"])
+    __weak typeof (self) weakself= self;
+    if ([weakself.title isEqualToString:@"热点"])
     {
-        //请求api
+        //请求api加载幻灯片
         NSString *focusApiUrl=@"http://58.83.218.135:9999/api/iossource/getfocusnews/34/4";
         [LZClassModel initDictWithRemoteUrl:focusApiUrl success:^(NSArray *result) {
-            NSLog(@"远程请求数量%lu",(unsigned long)result.count);//3个
+            NSLog(@"远程请求焦点数量%lu",(unsigned long)result.count);//3个
 
             for (int i = 0 ; i<result.count;i++) {
                 LZClassModel *model=[result objectAtIndex:i];
                 CGRect imageFrame=CGRectMake(i*ScreenWidth, 0, self.focusView.bounds.size.width, 320);
                 UIImageView *imgItem=[[UIImageView alloc]initWithFrame:imageFrame];
                 [imgItem sd_setImageWithURL:[NSURL URLWithString:model.imgUrl] placeholderImage:nil];
-                [self.focusView addSubview:imgItem];
+                [weakself.focusView addSubview:imgItem];
             }
         }];
-
+        
+        //请求tableview数据api
+        NSString *tableViewApiUrl= [NSString stringWithFormat:@"%@%@",BaseUrl,@"/api/iossource/querynews/34/1/5"];
+        NSLog(@"url is %@",tableViewApiUrl);//3个
+        
+        [LZClassModel initDictWithRemoteUrl:tableViewApiUrl success:^(NSArray *result) {
+            weakself.dataList=result;
+        }];
 
         self.focusView.backgroundColor=[UIColor greenColor];
          //画幻灯片
@@ -114,21 +145,25 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+
+    return self.dataList.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reuseIdentifier" forIndexPath:indexPath];
+    //需要注册类型，否则报异常
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:tableViewCellId];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:tableViewCellId forIndexPath:indexPath];
     
-    
-    
+    if (cell==nil) {
+        cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:tableViewCellId];
+    }
+    LZClassModel *model=self.dataList[indexPath.row];
+    cell.textLabel.text=model.title;
     return cell;
 }
  

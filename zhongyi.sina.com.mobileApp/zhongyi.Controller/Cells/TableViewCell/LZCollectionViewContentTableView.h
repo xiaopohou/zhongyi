@@ -15,4 +15,5 @@
 @property (nonatomic,strong) NSString * cid;
 @property(nonatomic,strong) LZFocusScrollView *focusView;
 @property(nonatomic,strong) UIPageControl *pageControl;
+@property(nonatomic,strong) NSArray *dataList;
 @end
