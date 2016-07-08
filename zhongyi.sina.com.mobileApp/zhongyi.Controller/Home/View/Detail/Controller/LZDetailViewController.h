@@ -10,7 +10,6 @@
 #import "LZBaseDetailViewController.h"
 @interface LZDetailViewController : LZBaseDetailViewController
 @property(nonatomic,strong) NSString *oid;
-
 -(void) shareArticle;//分享
 -(void) localCollect;//本收
 @end

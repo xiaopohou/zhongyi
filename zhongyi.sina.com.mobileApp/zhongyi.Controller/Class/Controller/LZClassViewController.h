@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LZClassTableView.h"
 
 @interface LZClassViewController : UIViewController
-
+-(void) setUI;
 @end

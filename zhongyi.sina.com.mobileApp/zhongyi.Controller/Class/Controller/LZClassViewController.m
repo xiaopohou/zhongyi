@@ -7,31 +7,54 @@
 //
 
 #import "LZClassViewController.h"
-
+#import "LZClassModel.h"
+#import "LZNewsListViewController.h"
 @interface LZClassViewController ()
-
+@property (nonatomic,strong) LZClassTableView *lzClassTableView;
 @end
 
 @implementation LZClassViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self setUI];
+    
+    //注册通知（监听跳转列表）
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(RedirectToNewsListViewPage:) name:KNotification_RedirectNewsList object:nil];
 }
 
+//调转列表
+-(void) RedirectToNewsListViewPage:(NSNotification *) notification
+{
+    NSLog(@"收到通知----s");
+        NSString *parameterValue=[notification.userInfo objectForKey:KNotificationNewsListParamKey];
+        NSLog(@"%@",parameterValue);
+        LZNewsListViewController *newsListView=[[LZNewsListViewController alloc]init];
+        newsListView.cid=parameterValue;
+        [self.navigationController pushViewController:newsListView animated:YES];
+    
+    
+    NSLog(@"收到通知----e");
+}
+
+-(LZClassTableView *) lzClassTableView
+{
+    if (_lzClassTableView==nil) {
+        _lzClassTableView=[[LZClassTableView alloc]init];
+    }
+    return _lzClassTableView;
+}
+-(void) setUI
+{
+    [LZClassModel initDictWithRemoteUrl:KClassDataApi success:^(NSArray *result) {
+        self.lzClassTableView.dataList=result;
+       [self.view addSubview:self.lzClassTableView.tableView];
+    }];
+   
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

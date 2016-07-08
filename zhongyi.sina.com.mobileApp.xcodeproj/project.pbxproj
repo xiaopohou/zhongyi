@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		1D009DB31D2B965D00993564 /* LZFocusScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D009DB21D2B965D00993564 /* LZFocusScrollView.m */; };
 		1D009DB41D2B9BD800993564 /* LZCollectionViewContentTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF4217C1D2A0EA900D2FA04 /* LZCollectionViewContentTableView.m */; };
+		1D2044E51D2F446A00A1BE34 /* LZNewsListItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2044E41D2F446A00A1BE34 /* LZNewsListItemCell.m */; };
+		1D2044EB1D2F679300A1BE34 /* LZClassListTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2044EA1D2F679300A1BE34 /* LZClassListTableView.m */; };
+		1D2044EE1D2F751300A1BE34 /* LZClassTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2044ED1D2F751300A1BE34 /* LZClassTableView.m */; };
+		1D2044F11D2F851F00A1BE34 /* LZNewsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2044F01D2F851F00A1BE34 /* LZNewsListViewController.m */; };
 		1D464E211D24C55F000032B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D464E201D24C55F000032B3 /* Assets.xcassets */; };
 		1D464E281D24D3E1000032B3 /* LZClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D464E271D24D3E1000032B3 /* LZClassViewController.m */; };
 		1D464E2C1D24D4A3000032B3 /* LZBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D464E2B1D24D4A3000032B3 /* LZBaseViewController.m */; };
@@ -40,6 +44,14 @@
 		0BC88FF0BB3D547823D0F4D1 /* Pods-zhongyi.sina.com.mobileApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zhongyi.sina.com.mobileApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-zhongyi.sina.com.mobileApp/Pods-zhongyi.sina.com.mobileApp.debug.xcconfig"; sourceTree = "<group>"; };
 		1D009DB11D2B965D00993564 /* LZFocusScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZFocusScrollView.h; sourceTree = "<group>"; };
 		1D009DB21D2B965D00993564 /* LZFocusScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZFocusScrollView.m; sourceTree = "<group>"; };
+		1D2044E31D2F446A00A1BE34 /* LZNewsListItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZNewsListItemCell.h; sourceTree = "<group>"; };
+		1D2044E41D2F446A00A1BE34 /* LZNewsListItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZNewsListItemCell.m; sourceTree = "<group>"; };
+		1D2044E91D2F679300A1BE34 /* LZClassListTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZClassListTableView.h; sourceTree = "<group>"; };
+		1D2044EA1D2F679300A1BE34 /* LZClassListTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZClassListTableView.m; sourceTree = "<group>"; wrapsLines = 1; };
+		1D2044EC1D2F751300A1BE34 /* LZClassTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZClassTableView.h; sourceTree = "<group>"; };
+		1D2044ED1D2F751300A1BE34 /* LZClassTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZClassTableView.m; sourceTree = "<group>"; };
+		1D2044EF1D2F851F00A1BE34 /* LZNewsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZNewsListViewController.h; sourceTree = "<group>"; };
+		1D2044F01D2F851F00A1BE34 /* LZNewsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZNewsListViewController.m; sourceTree = "<group>"; };
 		1D464E201D24C55F000032B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D464E261D24D3E1000032B3 /* LZClassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZClassViewController.h; sourceTree = "<group>"; };
 		1D464E271D24D3E1000032B3 /* LZClassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZClassViewController.m; sourceTree = "<group>"; };
@@ -103,9 +115,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D2044E21D2F43F700A1BE34 /* CommonCell */ = {
+			isa = PBXGroup;
+			children = (
+				1D2044E31D2F446A00A1BE34 /* LZNewsListItemCell.h */,
+				1D2044E41D2F446A00A1BE34 /* LZNewsListItemCell.m */,
+			);
+			path = CommonCell;
+			sourceTree = "<group>";
+		};
 		1D464E251D24CB63000032B3 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				1D2044E21D2F43F700A1BE34 /* CommonCell */,
 				1DED304A1D26586100DE57E2 /* TableViewCell */,
 				1DED30461D2656C000DE57E2 /* CollectionViewCell */,
 			);
@@ -280,8 +302,14 @@
 		1DEE8B911D226A0E00DB6AA5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1D2044EC1D2F751300A1BE34 /* LZClassTableView.h */,
+				1D2044ED1D2F751300A1BE34 /* LZClassTableView.m */,
 				1D464E261D24D3E1000032B3 /* LZClassViewController.h */,
 				1D464E271D24D3E1000032B3 /* LZClassViewController.m */,
+				1D2044E91D2F679300A1BE34 /* LZClassListTableView.h */,
+				1D2044EA1D2F679300A1BE34 /* LZClassListTableView.m */,
+				1D2044EF1D2F851F00A1BE34 /* LZNewsListViewController.h */,
+				1D2044F01D2F851F00A1BE34 /* LZNewsListViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -615,23 +643,27 @@
 				1DED301A1D25FC8B00DE57E2 /* LZHttpHelper.m in Sources */,
 				1D009DB41D2B9BD800993564 /* LZCollectionViewContentTableView.m in Sources */,
 				1DEE8BC01D2283CF00DB6AA5 /* LZNavigationViewController.m in Sources */,
+				1D2044EB1D2F679300A1BE34 /* LZClassListTableView.m in Sources */,
 				1DEE8BC61D2284FF00DB6AA5 /* LZAboutMeViewController.m in Sources */,
 				1DEE8BBD1D227FF600DB6AA5 /* LZMainTabBarViewController.m in Sources */,
 				1D464E301D24D689000032B3 /* LZTitleScrollView.m in Sources */,
 				1D4FC5171D235BA200361C57 /* LZNewsInfo.m in Sources */,
 				1DFAD71A1D2E289600F83940 /* LZDetailViewController.m in Sources */,
 				1D464E2C1D24D4A3000032B3 /* LZBaseViewController.m in Sources */,
+				1D2044EE1D2F751300A1BE34 /* LZClassTableView.m in Sources */,
 				1D464E281D24D3E1000032B3 /* LZClassViewController.m in Sources */,
 				1DED30451D2654E300DE57E2 /* LZContentCollectionView.m in Sources */,
 				1DFAD71D1D2E2BC900F83940 /* LZBaseDetailViewController.m in Sources */,
 				1D009DB31D2B965D00993564 /* LZFocusScrollView.m in Sources */,
 				1DFAD7271D2E313D00F83940 /* LZNews.m in Sources */,
+				1D2044E51D2F446A00A1BE34 /* LZNewsListItemCell.m in Sources */,
 				1DEE8BAE1D226B9200DB6AA5 /* main.m in Sources */,
 				1DEE8BB61D227C7600DB6AA5 /* LZHomeViewController.m in Sources */,
 				1DED30491D2656F900DE57E2 /* LZCollectionViewCell.m in Sources */,
 				1DFAD7241D2E300800F83940 /* LZClassModel.m in Sources */,
 				1DEE8BCC1D22851D00DB6AA5 /* LZSettingViewController.m in Sources */,
 				1DFAD7321D2E57CE00F83940 /* LZConstants.m in Sources */,
+				1D2044F11D2F851F00A1BE34 /* LZNewsListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

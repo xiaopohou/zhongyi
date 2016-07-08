@@ -14,7 +14,7 @@
 -(instancetype) initModelWithDict:(NSDictionary *) dict
 {
     LZClassModel *model=[[LZClassModel alloc]init];
-    model.cid=dict[@"cid"];
+    model.cid=dict[@"id"];
     model.title=dict[@"title"];
     model.url=dict[@"url"];
     model.imgUrl=dict[@"imgurl"];

@@ -30,7 +30,7 @@
     [self addController:homeView withTitle:@"首页" withIamgeUrl:@"tab_home"];
     
     LZClassViewController *classView=[[LZClassViewController alloc]init];
-    [self addController:classView withTitle:@"分页" withIamgeUrl:@"topic_off"];
+    [self addController:classView withTitle:@"分类" withIamgeUrl:@"topic_off"];
     
     LZAboutMeViewController *aboutView=[[LZAboutMeViewController alloc]init];
     [self addController:aboutView withTitle:@"关于我们" withIamgeUrl:@"tab_dis"];

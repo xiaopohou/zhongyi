@@ -9,7 +9,7 @@
 #import "LZHomeViewController.h"
 #import "LZClassModel.h"
 #import "LZDetailViewController.h"
-
+#import "LZNewsListViewController.h"
 @implementation LZHomeViewController
 
 -(instancetype) init
@@ -28,8 +28,10 @@
     //很奇怪的一句话，不加的话导航栏会出现坐标不准的情况
     self.automaticallyAdjustsScrollViewInsets=NO;
     
-    //注册通知
+    //注册监听（监听跳转正文）
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(RedirectToDetailViewPage:) name:KNotificationNameForContentView object:nil];
+    
+    
     
 #pragma 加载远程无法解决
     //对base类属性赋值
@@ -52,6 +54,15 @@
     
 }
 
+-(void) dealloc
+{
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
+}
+-(void) test:(UIBarButtonItem *) sender
+{
+    NSLog(@"1111");
+}
+//首页tableview接收到点击后跳转
 -(void) RedirectToDetailViewPage:(NSNotification *) notification
 {
     LZDetailViewController *delailView=[[LZDetailViewController alloc]init];
