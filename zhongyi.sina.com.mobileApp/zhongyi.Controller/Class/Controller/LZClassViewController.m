@@ -9,6 +9,7 @@
 #import "LZClassViewController.h"
 #import "LZClassModel.h"
 #import "LZNewsListViewController.h"
+#import "LZDetailViewController.h"
 @interface LZClassViewController ()
 @property (nonatomic,strong) LZClassTableView *lzClassTableView;
 @end
@@ -22,6 +23,9 @@
     
     //注册通知（监听跳转列表）
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(RedirectToNewsListViewPage:) name:KNotification_RedirectNewsList object:nil];
+    
+    //注册通知（监听跳转正文）
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(RedirectToNewsDetialViewPage:) name:KNotification_RedirectNewsListDetail object:nil];
 }
 
 //调转列表
@@ -37,7 +41,13 @@
     
     NSLog(@"收到通知----e");
 }
-
+//调转列表
+-(void) RedirectToNewsDetialViewPage:(NSNotification *) notification
+{
+    NSString *parameterValue=[notification.userInfo objectForKey:KNotificationNewsDetailParamKey];
+    LZDetailViewController *detailView=[[LZDetailViewController alloc] init];
+    [self.navigationController pushViewController:detailView animated:YES];
+}
 -(LZClassTableView *) lzClassTableView
 {
     if (_lzClassTableView==nil) {

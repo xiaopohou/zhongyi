@@ -8,6 +8,7 @@
 
 #import "LZNews.h"
 #import "LZHttpHelper.h"
+#import <SVProgressHUD.h>
 @implementation LZNews
 
 -(instancetype) initModelWithDict:(NSDictionary *) dict
@@ -27,7 +28,7 @@
 +(void) loadModelListWithRemoteUrl:(NSString *) url success:(successRequestNews)callback
 {
    // __weak typeof (self) weakself=self;
-    
+    [SVProgressHUD show];
     [LZHttpHelper getContentWithRetmoteUrl:url success:^(id responseObject) {
         NSError *error=nil;
         NSString *jsonStr=[NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:&error];
@@ -37,14 +38,17 @@
         NSDictionary *dictInfo=[NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:&error];
         
         NSMutableArray *mutiNews=[NSMutableArray new];
-
-        NSDictionary *dictModelList=dictInfo[@"data"];
-        
-        for (NSDictionary *dicItem in dictModelList) {
-            LZNews *model=[LZNews initWithDict:dicItem];
-            [mutiNews addObject:model];
+        int result=[dictInfo[@"record"] intValue];
+        if (result!=0) {
+            NSDictionary *dictModelList=dictInfo[@"data"];
+            for (NSDictionary *dicItem in dictModelList) {
+                LZNews *model=[LZNews initWithDict:dicItem];
+                [mutiNews addObject:model];
+            }
         }
+       //NSLog(@"---self.mutiNews.count--->%d",mutiNews.count);
         callback(mutiNews.copy);
+        [SVProgressHUD dismiss];
     }];
 }
 

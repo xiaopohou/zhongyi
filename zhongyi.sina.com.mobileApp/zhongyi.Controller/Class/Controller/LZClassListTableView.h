@@ -12,5 +12,6 @@
 @interface LZClassListTableView : UITableViewController
 @property(nonatomic,strong) NSArray*datalist;
 @property(nonatomic,strong) NSString *cid;
+
  
 @end

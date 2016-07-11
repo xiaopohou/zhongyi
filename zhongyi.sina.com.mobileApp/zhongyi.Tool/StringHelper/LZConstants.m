@@ -10,6 +10,8 @@
 
 NSString * const KNotificationNameForContentView=@"CollectionViewCellPushToDetialViewNotification";
 NSString * const KNotificationObjectKeyName=@"key1";
+int  KRemoteServerDefaultPageSize=2;
+
 @implementation LZConstants
 
 @end

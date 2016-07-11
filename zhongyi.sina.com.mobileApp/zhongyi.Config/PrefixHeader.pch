@@ -14,11 +14,14 @@
 #define KClassDataApi @"http://58.83.218.135:9999/api/iossource/queryclass"//读取分类数据api
 #define KClassTableViewItemTag1 @"tableViewCellItemTag1"//分类table中cell的标识
 #define KClassTableViewItemTag2 @"tableViewCellItemTag2"//资讯列表table中cell的标识
-#define KClassListNewsDataApi @"http://58.83.218.135:9999/querynews/"//指定分类数据
+#define KClassListNewsDataApi @"http://58.83.218.135:9999/api/iossource/querynews/"//指定分类数据
 #define KNotification_RedirectNewsList @"KNotification_RedirectNewsList"//跳转分类列表通知名称
 #define KNotification_RedirectNewsListDetail @"KNotification_RedirectNewsListDetail"//跳转分类列表中的正文通知名称
 #define KNotificationNewsListParamKey @"KNotificationNewsListParamKey"
 #define KNotificationNewsDetailParamKey @"KNotificationNewsDetailParamKey"
 #import "LZConstants.h"   //常量
-
+#import <AFNetworking.h>
+#import <FMDB.h>
+#import <SVProgressHUD.h>
+#import <MJRefresh.h>
 #endif /* PrefixHeader_pch */

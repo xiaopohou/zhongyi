@@ -23,8 +23,11 @@
 }
 -(void) setCid:(NSString *)cid
 {
+    _cid=cid;
 }
 - (void)viewDidLoad {
+    
+    self.lzClassListTableView.cid=self.cid;
     [self.view addSubview:self.lzClassListTableView.tableView];
 
     [super viewDidLoad];

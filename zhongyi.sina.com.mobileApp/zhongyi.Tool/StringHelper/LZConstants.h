@@ -9,7 +9,8 @@
 #import <Foundation/Foundation.h>
 extern NSString * const KNotificationNameForContentView;
 extern NSString * const KNotificationObjectKeyName;
- 
+extern int  KRemoteServerDefaultPageSize;
+
 @interface LZConstants : NSObject
 
 @end
