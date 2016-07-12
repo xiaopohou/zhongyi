@@ -8,7 +8,7 @@
 
 #import "LZClassListTableView.h"
 #import "LZNewsListViewController.h"
-
+#import "LZNewsCell.h"
 @interface LZClassListTableView ()
 @property(nonatomic,strong) NSMutableArray *newsModelArray;
 @property(nonatomic,assign) int tiems;
@@ -142,16 +142,32 @@
     return self.newsModelArray.count;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 80;
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
    
     LZNews *model=[self.newsModelArray objectAtIndex:indexPath.row];
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:KClassTableViewItemTag2];
-     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:KClassTableViewItemTag2 forIndexPath:indexPath];
+    //默认系统
+//    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:KClassTableViewItemTag2];
+//     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:KClassTableViewItemTag2 forIndexPath:indexPath];
+//    if (cell==nil) {
+//        cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:KClassTableViewItemTag2];
+//    }
+//    cell.textLabel.text=model.title;
+    
+    
+    //自定义Cell(xib)
+    [self.tableView registerNib:[UINib nibWithNibName:@"LZNewsCell" bundle:nil] forCellReuseIdentifier:KClassTableViewItemTag2];
+    
+    LZNewsCell *cell = [self.tableView dequeueReusableCellWithIdentifier:KClassTableViewItemTag2 forIndexPath:indexPath];
     if (cell==nil) {
-        cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:KClassTableViewItemTag2];
+        
+        cell=[[LZNewsCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:KClassTableViewItemTag2];
     }
-    cell.textLabel.text=model.title;
+    cell.newsModel=model;
     return cell;
 }
  

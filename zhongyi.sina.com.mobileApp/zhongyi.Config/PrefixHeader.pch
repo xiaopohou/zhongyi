@@ -31,4 +31,5 @@
 #import <FMDB.h>
 #import <SVProgressHUD.h>
 #import <MJRefresh.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 #endif /* PrefixHeader_pch */
