@@ -76,23 +76,20 @@
 //上拉加载
 -(void) loadMoreData
 {
-    //LZNews *newsModel=[self.newsModelArray lastObject];
+    LZNews *newsModel=[self.newsModelArray lastObject];
+    
+    
     if (!self.cid) {
         return;
     }
     
-    NSLog(@"---self.tiems期初值是---%d",self.tiems);
+    //NSLog(@"---newsModel---%d",newsModel.infoid);
 
     self.tiems=self.tiems+1;
-    NSLog(@"-------self.tiems被上拉一次----------%d",self.tiems);
-    int pageSize=self.tiems*KRemoteServerDefaultPageSize;
-    int pageIndex=1;
-    NSLog(@"-------pagesize----------%d",pageSize);
-    NSString *apiParameterRoute=[NSString stringWithFormat:@"%@/%d/%d",self.cid,pageIndex,pageSize];
-    //{kid}/{pageindex=1}/{pagesize=15}
-    NSString *url=[NSString stringWithFormat:@"%@%@",KClassListNewsDataApi,apiParameterRoute];
+ 
+    NSString *url=[NSString stringWithFormat:@"%@%@/%d/%@",KClassListNewsDataApi,self.cid,KRemoteServerDefaultPageSize,newsModel.infoid];
     [LZNews loadModelListWithRemoteUrl:url success:^(NSArray *data) {
-        [self.newsModelArray removeAllObjects];
+        //[self.newsModelArray removeAllObjects];
         [self.newsModelArray addObjectsFromArray:data];
         [self.tableView reloadData];
     }];
@@ -102,7 +99,8 @@
 }
 -(void) loadData
 {
-    NSString *url=[NSString stringWithFormat:@"%@%@/1/%d",KClassListNewsDataApi,self.cid,KRemoteServerDefaultPageSize];
+    //queryloadmorenews/{kid}/{limit=10}/{infoid=0}
+    NSString *url=[NSString stringWithFormat:@"%@%@/%d",KClassListNewsDataApi,self.cid,KRemoteServerDefaultPageSize];
     
     __weak typeof(self) weakself=self;
     AFNetworkReachabilityManager *netWork=[AFNetworkReachabilityManager sharedManager];
