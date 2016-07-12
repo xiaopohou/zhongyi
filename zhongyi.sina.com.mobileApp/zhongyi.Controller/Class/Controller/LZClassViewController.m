@@ -41,11 +41,13 @@
     
     NSLog(@"收到通知----e");
 }
-//调转列表
+//调转详情页
 -(void) RedirectToNewsDetialViewPage:(NSNotification *) notification
 {
     NSString *parameterValue=[notification.userInfo objectForKey:KNotificationNewsDetailParamKey];
     LZDetailViewController *detailView=[[LZDetailViewController alloc] init];
+    
+    detailView.hidesBottomBarWhenPushed=YES;
     [self.navigationController pushViewController:detailView animated:YES];
 }
 -(LZClassTableView *) lzClassTableView

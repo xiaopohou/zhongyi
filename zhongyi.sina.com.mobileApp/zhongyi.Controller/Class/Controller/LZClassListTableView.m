@@ -179,7 +179,10 @@
     {
         //通知最外层跳转
         LZNews *model=[self.newsModelArray objectAtIndex:indexPath.row];
-        NSDictionary *dictInfo=[NSDictionary dictionaryWithObject:model.infoid forKey:KNotificationNewsDetailParamKey];
+        NSDictionary *dictInfo=[NSDictionary dictionaryWithObject:model.infourl forKey:KNotificationNewsDetailParamKey];
+        
+        
+        
         [[NSNotificationCenter defaultCenter]postNotificationName:KNotification_RedirectNewsListDetail object:nil userInfo:dictInfo];
     }
 }

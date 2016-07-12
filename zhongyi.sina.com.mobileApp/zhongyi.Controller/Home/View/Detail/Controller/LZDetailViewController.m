@@ -18,7 +18,8 @@
     [super viewDidLoad];
     self.title=@"正文页";
     self.webView.frame=CGRectMake(0, 44, KScreenWidth,KScreenHeight);
-    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.baidu.com"]]];
+    
+    //[self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.baidu.com"]]];
     
     [self.view addSubview:self.webView];
     //NSLog(@"接收的值是：%@",self.oid);
